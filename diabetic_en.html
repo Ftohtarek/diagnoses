@@ -1,0 +1,299 @@
+<html><head>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src http: https: 'unsafe-inline'; style-src http: https: 'unsafe-inline' ; img-src http: https: data:; font-src http: https:; connect-src http: https:; media-src http: https:; object-src 'none'; child-src 'none'; frame-src 'none'">
+    <script type="text/javascript">
+      
+
+      // Initialize sandbox
+      (function () {
+        function blockMethod (name) {
+          return () => console.error("Ignored call to '" + name + "()'.")
+        }
+
+        window['alert'] = blockMethod('alert'); window['confirm'] = blockMethod('confirm'); window['print'] = blockMethod('print'); window['prompt'] = blockMethod('prompt');
+        delete window['Worker']; window['Worker'] = undefined; delete window['indexedDB']; window['indexedDB'] = undefined;
+
+        let _navigator = {};
+        for (let key in navigator) {
+          const prop = navigator[key];
+          if (typeof prop !== 'object' && typeof prop !== 'function') {
+            _navigator[key] = prop;
+          }
+        }
+        delete window.navigator;
+        window.navigator = _navigator;
+      })();
+    </script>
+    
+  </head>
+  <body>
+    
+<style type="text/css">
+.tftable {font-size:14px;color:#333333;width:100%;border-width: 1px;border-color: #87ceeb;border-collapse: collapse;}
+.tftable th {font-size:18px;background-color:#87ceeb;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;text-align:left;}
+.tftable tr {background-color:#ffffff;}
+.tftable td {font-size:14px;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;}
+.tftable tr:hover {background-color:#e0ffff;}
+</style>
+
+<table class="tftable" border="1">
+<tbody><tr>
+<th>ID</th>
+<th>Name</th>
+<th>Code</th>
+</tr>
+
+<tr>
+<td>1</td>
+<td>Diabetes mellitus, type unspecified</td>
+<td>5A14</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Diabetes mellitus arising in pregnancy</td>
+<td>JA63.2</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Diabetes mellitus due to drug or chemical</td>
+<td>5A13.4</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Disorders of phosphorus metabolism or phosphatases</td>
+<td>5C64.3</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Type 2 diabetes mellitus</td>
+<td>5A11</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Other specified syndromic genetic deafness</td>
+<td>LD2H.Y</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Type 1 diabetes mellitus</td>
+<td>5A10</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Diabetic foot ulcer</td>
+<td>BD54</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Uncontrolled or unstable diabetes mellitus</td>
+<td>5A24</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Central diabetes insipidus</td>
+<td>5A61.5</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Syndrome of infant of a diabetic mother, type 1 or 2, nongestational, insulin dependent</td>
+<td>KB60.1</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Intermediate hyperglycaemia, unspecified</td>
+<td>5A40.Z</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Chronic kidney disease, stage unspecified</td>
+<td>GB61.Z</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Neonatal diabetes mellitus, unspecified</td>
+<td>KB60.2Z</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Other specified disorders of iron metabolism</td>
+<td>5C64.1Y</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Insulin-resistance syndromes</td>
+<td>5A44</td>
+</tr>
+<tr>
+<td>17</td>
+<td>Diabetic glomerular changes</td>
+<td>MF83</td>
+</tr>
+<tr>
+<td>18</td>
+<td>Diabetes mellitus in pregnancy, unspecified</td>
+<td>JA63.Z</td>
+</tr>
+<tr>
+<td>19</td>
+<td>Diabetic skin lesions</td>
+<td>EB90.0</td>
+</tr>
+<tr>
+<td>20</td>
+<td>Other specified disorders of cutaneous connective tissue</td>
+<td>EE7Y</td>
+</tr>
+<tr>
+<td>21</td>
+<td>Diabetes mellitus, other specified type</td>
+<td>5A13</td>
+</tr>
+<tr>
+<td>22</td>
+<td>Anterior ischemic optic neuropathy</td>
+<td>9C40.40</td>
+</tr>
+<tr>
+<td>23</td>
+<td>Nephrogenic diabetes insipidus</td>
+<td>GB90.4A</td>
+</tr>
+<tr>
+<td>24</td>
+<td>Diabetes mellitus due to other specified cause</td>
+<td>5A13.Y</td>
+</tr>
+<tr>
+<td>25</td>
+<td>Other specified diabetes mellitus in pregnancy</td>
+<td>JA63.Y</td>
+</tr>
+<tr>
+<td>26</td>
+<td>Other specified secondary disorders of arteries and arterioles</td>
+<td>BD53.Y</td>
+</tr>
+<tr>
+<td>27</td>
+<td>Diabetic Charcot arthropathy</td>
+<td>FA38.10</td>
+</tr>
+<tr>
+<td>28</td>
+<td>Diabetic polyneuropathy</td>
+<td>8C03.0</td>
+</tr>
+<tr>
+<td>29</td>
+<td>Other specified motility disorders of small intestine</td>
+<td>DA93.Y</td>
+</tr>
+<tr>
+<td>30</td>
+<td>Family history of diabetes mellitus</td>
+<td>QC64.0</td>
+</tr>
+<tr>
+<td>31</td>
+<td>Other specified acute complications of diabetes mellitus</td>
+<td>5A2Y</td>
+</tr>
+<tr>
+<td>32</td>
+<td>Diabetes mellitus due to other genetic syndromes</td>
+<td>5A13.6</td>
+</tr>
+<tr>
+<td>33</td>
+<td>Diabetic arthropathy</td>
+<td>FA38.0</td>
+</tr>
+<tr>
+<td>34</td>
+<td>Other specified cutaneous markers of internal disorders</td>
+<td>EL3Y</td>
+</tr>
+<tr>
+<td>35</td>
+<td>Other specified neonatal diabetes mellitus</td>
+<td>KB60.2Y</td>
+</tr>
+<tr>
+<td>36</td>
+<td>Syndrome of infant of mother with gestational diabetes</td>
+<td>KB60.0</td>
+</tr>
+<tr>
+<td>37</td>
+<td>Secondary brachial plexus lesion due to certain specified disorders</td>
+<td>8B95</td>
+</tr>
+<tr>
+<td>38</td>
+<td>Neovascular secondary angle closure glaucoma</td>
+<td>9C61.32</td>
+</tr>
+<tr>
+<td>39</td>
+<td>Diabetic cataract</td>
+<td>9B10.21</td>
+</tr>
+<tr>
+<td>40</td>
+<td>Diabetic coma</td>
+<td>5A23</td>
+</tr>
+<tr>
+<td>41</td>
+<td>Diabetic retinopathy, unspecified</td>
+<td>9B71.0Z</td>
+</tr>
+<tr>
+<td>42</td>
+<td>Male erectile dysfunction, unspecified</td>
+<td>HA01.1Z</td>
+</tr>
+<tr>
+<td>43</td>
+<td>Cystic fibrosis, unspecified</td>
+<td>CA25.Z</td>
+</tr>
+<tr>
+<td>44</td>
+<td>Diabetic acidosis, unspecified</td>
+<td>5A22.Z</td>
+</tr>
+<tr>
+<td>45</td>
+<td>Necrobiosis lipoidica</td>
+<td>EE80.1</td>
+</tr>
+<tr>
+<td>46</td>
+<td>Autonomic neuropathy due to diabetes mellitus</td>
+<td>8D88.1</td>
+</tr>
+<tr>
+<td>47</td>
+<td>Intentional self-harm by exposure to other or unspecified drug, medicament or biological substance</td>
+<td>PC98</td>
+</tr>
+<tr>
+<td>48</td>
+<td>Unintentional exposure to or harmful effects of other or unspecified drug, medicament or biological substance</td>
+<td>PB28</td>
+</tr>
+<tr>
+<td>49</td>
+<td>Diabetic macular oedema</td>
+<td>9B71.02</td>
+</tr>
+<tr>
+<td>50</td>
+<td>Diabetic lumbosacral plexopathy</td>
+<td>8B92.2</td>
+</tr>
+</tbody></table>
+
+  
+
+</body></html>
