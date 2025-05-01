@@ -1,0 +1,6689 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src http: https: 'unsafe-inline'; style-src http: https: 'unsafe-inline' ; img-src http: https: data:; font-src http: https:; connect-src http: https:; media-src http: https:; object-src 'none'; child-src 'none'; frame-src 'none'">
+    <script type="text/javascript">
+      
+
+      // Initialize sandbox
+      (function () {
+        function blockMethod (name) {
+          return () => console.error("Ignored call to '" + name + "()'.")
+        }
+
+        window['alert'] = blockMethod('alert'); window['confirm'] = blockMethod('confirm'); window['print'] = blockMethod('print'); window['prompt'] = blockMethod('prompt');
+        delete window['Worker']; window['Worker'] = undefined; delete window['indexedDB']; window['indexedDB'] = undefined;
+
+        let _navigator = {};
+        for (let key in navigator) {
+          const prop = navigator[key];
+          if (typeof prop !== 'object' && typeof prop !== 'function') {
+            _navigator[key] = prop;
+          }
+        }
+        delete window.navigator;
+        window.navigator = _navigator;
+      })();
+    </script>
+    
+  </head>
+  <body>
+    
+<style type="text/css">
+.tftable {font-size:14px;color:#333333;width:100%;border-width: 1px;border-color: #87ceeb;border-collapse: collapse;}
+.tftable th {font-size:18px;background-color:#87ceeb;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;text-align:left;}
+.tftable tr {background-color:#ffffff;}
+.tftable td {font-size:14px;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;}
+.tftable tr:hover {background-color:#e0ffff;}
+</style>
+
+<table class="tftable" border="1">
+<tbody><tr>
+<th>ID</th>
+<th>Name</th>
+</tr>
+
+<tr>
+<td>1</td>
+<td>Congenital anomaly of aortic arch branch</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Aberrant origin of right subclavian artery</td>
+</tr>
+<tr>
+<td>3</td>
+<td>aberrant right subclavian artery syndrome</td>
+</tr>
+<tr>
+<td>4</td>
+<td>ARSA - [aberrant right subclavian artery]</td>
+</tr>
+<tr>
+<td>5</td>
+<td>ARSCA - [aberrant right subclavian artery]</td>
+</tr>
+<tr>
+<td>6</td>
+<td>arteria lusoria</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Aberrant origin of left subclavian artery</td>
+</tr>
+<tr>
+<td>8</td>
+<td>ALSA - [aberrant left subclavian artery]</td>
+</tr>
+<tr>
+<td>9</td>
+<td>ALSCA - [aberrant left subclavian artery]</td>
+</tr>
+<tr>
+<td>10</td>
+<td>aberrant left subclavian artery</td>
+</tr>
+<tr>
+<td>11</td>
+<td>retroesophageal left subclavian artery</td>
+</tr>
+<tr>
+<td>12</td>
+<td>RELSCA - [retroesophageal left subclavian artery]</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Isolation of an aortic arch branch</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Isolation of innominate artery</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Aberrant innominate artery</td>
+</tr>
+<tr>
+<td>16</td>
+<td>aberrant origin of brachiocephalic artery</td>
+</tr>
+<tr>
+<td>17</td>
+<td>anomalous origin of innominate artery</td>
+</tr>
+<tr>
+<td>18</td>
+<td>aberrant origin of innominate artery</td>
+</tr>
+<tr>
+<td>19</td>
+<td>aberrant brachiocephalic artery</td>
+</tr>
+<tr>
+<td>20</td>
+<td>anomalous origin of the brachiocephalic artery</td>
+</tr>
+<tr>
+<td>21</td>
+<td>Common origin of the innominate artery and left common carotid artery</td>
+</tr>
+<tr>
+<td>22</td>
+<td>left common carotid artery arising from innominate artery</td>
+</tr>
+<tr>
+<td>23</td>
+<td>bovine arch</td>
+</tr>
+<tr>
+<td>24</td>
+<td>Separate origins of internal and external carotid arteries</td>
+</tr>
+<tr>
+<td>25</td>
+<td>Isolation of left common carotid artery</td>
+</tr>
+<tr>
+<td>26</td>
+<td>Isolation of common carotid artery (deprecated)</td>
+</tr>
+<tr>
+<td>27</td>
+<td>Isolation of right common carotid artery</td>
+</tr>
+<tr>
+<td>28</td>
+<td>Isolation of common carotid artery (deprecated)</td>
+</tr>
+<tr>
+<td>29</td>
+<td>Isolation of left subclavian artery</td>
+</tr>
+<tr>
+<td>30</td>
+<td>Isolation of subclavian artery (deprecated)</td>
+</tr>
+<tr>
+<td>31</td>
+<td>Isolation of right subclavian artery</td>
+</tr>
+<tr>
+<td>32</td>
+<td>Isolation of subclavian artery (deprecated)</td>
+</tr>
+<tr>
+<td>33</td>
+<td>Paratyphoid fever</td>
+</tr>
+<tr>
+<td>34</td>
+<td>Infection due to Salmonella paratyphi</td>
+</tr>
+<tr>
+<td>35</td>
+<td>Paratyphoid fever A</td>
+</tr>
+<tr>
+<td>36</td>
+<td>paratyphoid A</td>
+</tr>
+<tr>
+<td>37</td>
+<td>salmonella paratyphoid fever A</td>
+</tr>
+<tr>
+<td>38</td>
+<td>salmonella infection paratyphi A</td>
+</tr>
+<tr>
+<td>39</td>
+<td>Enteritis due to paratyphoid fever A</td>
+</tr>
+<tr>
+<td>40</td>
+<td>Colitis due to paratyphoid fever A</td>
+</tr>
+<tr>
+<td>41</td>
+<td>Paratyphoid fever B</td>
+</tr>
+<tr>
+<td>42</td>
+<td>paratyphoid b</td>
+</tr>
+<tr>
+<td>43</td>
+<td>salmonella paratyphoid fever B</td>
+</tr>
+<tr>
+<td>44</td>
+<td>salmonella infection paratyphi B</td>
+</tr>
+<tr>
+<td>45</td>
+<td>salmonella schottmuelleri infection</td>
+</tr>
+<tr>
+<td>46</td>
+<td>Enteritis due to paratyphoid fever B</td>
+</tr>
+<tr>
+<td>47</td>
+<td>Colitis due to paratyphoid fever B</td>
+</tr>
+<tr>
+<td>48</td>
+<td>Paratyphoid fever C</td>
+</tr>
+<tr>
+<td>49</td>
+<td>paratyphoid C</td>
+</tr>
+<tr>
+<td>50</td>
+<td>salmonella paratyphoid fever C</td>
+</tr>
+<tr>
+<td>51</td>
+<td>salmonella hirschfeldii infection</td>
+</tr>
+<tr>
+<td>52</td>
+<td>salmonella infection paratyphi C</td>
+</tr>
+<tr>
+<td>53</td>
+<td>Enteritis due to paratyphoid fever C</td>
+</tr>
+<tr>
+<td>54</td>
+<td>Colitis due to paratyphoid fever C</td>
+</tr>
+<tr>
+<td>55</td>
+<td>Vitamin A deficiency, unspecified</td>
+</tr>
+<tr>
+<td>56</td>
+<td>Vitamin A deficiency</td>
+</tr>
+<tr>
+<td>57</td>
+<td>Hypovitaminosis A</td>
+</tr>
+<tr>
+<td>58</td>
+<td>Atrial fibrillation, unspecified</td>
+</tr>
+<tr>
+<td>59</td>
+<td>Atrial fibrillation</td>
+</tr>
+<tr>
+<td>60</td>
+<td>AF - [atrial fibrillation]</td>
+</tr>
+<tr>
+<td>61</td>
+<td>rapid atrial fibrillation</td>
+</tr>
+<tr>
+<td>62</td>
+<td>A Fib - [atrial fibrillation]</td>
+</tr>
+<tr>
+<td>63</td>
+<td>Hypervitaminosis A</td>
+</tr>
+<tr>
+<td>64</td>
+<td>hyperalimentation of Vitamin A</td>
+</tr>
+<tr>
+<td>65</td>
+<td>Excess vitamin A administered as drug</td>
+</tr>
+<tr>
+<td>66</td>
+<td>Other specified adrenocortical insufficiency</td>
+</tr>
+<tr>
+<td>67</td>
+<td>Congenital adrenocortical insufficiency</td>
+</tr>
+<tr>
+<td>68</td>
+<td>Congenital isolated ACTH deficiency</td>
+</tr>
+<tr>
+<td>69</td>
+<td>Familial adrenal hypoplasia</td>
+</tr>
+<tr>
+<td>70</td>
+<td>Familial hypoadrenocorticism</td>
+</tr>
+<tr>
+<td>71</td>
+<td>Hereditary adrenal hypoplasia</td>
+</tr>
+<tr>
+<td>72</td>
+<td>Familial adrenal hypoplasia, miniature type</td>
+</tr>
+<tr>
+<td>73</td>
+<td>Familial glucocorticoid deficiency</td>
+</tr>
+<tr>
+<td>74</td>
+<td>Hereditary glucocorticoid deficiency</td>
+</tr>
+<tr>
+<td>75</td>
+<td>ACTH - [adrenocorticotropic hormone] resistance</td>
+</tr>
+<tr>
+<td>76</td>
+<td>Neonatal adrenoleukodystrophy</td>
+</tr>
+<tr>
+<td>77</td>
+<td>Autosomal recessive neonatal adrenoleukodystrophy</td>
+</tr>
+<tr>
+<td>78</td>
+<td>NALD - [neonatal adrenoleukodystrophy]</td>
+</tr>
+<tr>
+<td>79</td>
+<td>IMAGe syndrome</td>
+</tr>
+<tr>
+<td>80</td>
+<td>Intrauterine growth retardation - metaphyseal dysplasia - adrenal hypoplasia congenita - genital anomalies</td>
+</tr>
+<tr>
+<td>81</td>
+<td>Triple A syndrome</td>
+</tr>
+<tr>
+<td>82</td>
+<td>Achalasia - addisonianism - alacrima syndrome</td>
+</tr>
+<tr>
+<td>83</td>
+<td>Allgrove syndrome</td>
+</tr>
+<tr>
+<td>84</td>
+<td>Achalasia - alacrimia syndrome</td>
+</tr>
+<tr>
+<td>85</td>
+<td>Adrenal gland atrophy</td>
+</tr>
+<tr>
+<td>86</td>
+<td>adrenal atrophy</td>
+</tr>
+<tr>
+<td>87</td>
+<td>adrenal glandular atrophy</td>
+</tr>
+<tr>
+<td>88</td>
+<td>suprarenal atrophy</td>
+</tr>
+<tr>
+<td>89</td>
+<td>Adrenal gland calcification</td>
+</tr>
+<tr>
+<td>90</td>
+<td>adrenal calcification</td>
+</tr>
+<tr>
+<td>91</td>
+<td>adrenal glandular calcification</td>
+</tr>
+<tr>
+<td>92</td>
+<td>suprarenal calcification</td>
+</tr>
+<tr>
+<td>93</td>
+<td>suprarenal gland calcification</td>
+</tr>
+<tr>
+<td>94</td>
+<td>suprarenal glandular calcification</td>
+</tr>
+<tr>
+<td>95</td>
+<td>gl. suprarenalis calcification</td>
+</tr>
+<tr>
+<td>96</td>
+<td>Adrenal gland haemorrhage</td>
+</tr>
+<tr>
+<td>97</td>
+<td>adrenal glandular haemorrhage</td>
+</tr>
+<tr>
+<td>98</td>
+<td>suprarenal haemorrhage</td>
+</tr>
+<tr>
+<td>99</td>
+<td>suprarenal glandular haemorrhage</td>
+</tr>
+<tr>
+<td>100</td>
+<td>suprarenal gland haemorrhage</td>
+</tr>
+<tr>
+<td>101</td>
+<td>gl. suprarenalis haemorrhage</td>
+</tr>
+<tr>
+<td>102</td>
+<td>cortex adrenal haemorrhage</td>
+</tr>
+<tr>
+<td>103</td>
+<td>haemorrhage of adrenal medulla</td>
+</tr>
+<tr>
+<td>104</td>
+<td>Adrenal gland necrosis</td>
+</tr>
+<tr>
+<td>105</td>
+<td>adrenal glandular necrosis</td>
+</tr>
+<tr>
+<td>106</td>
+<td>adrenal necrosis</td>
+</tr>
+<tr>
+<td>107</td>
+<td>ischaemic adrenal necrosis</td>
+</tr>
+<tr>
+<td>108</td>
+<td>suprarenal necrosis</td>
+</tr>
+<tr>
+<td>109</td>
+<td>suprarenal glandular necrosis</td>
+</tr>
+<tr>
+<td>110</td>
+<td>suprarenal gland necrosis</td>
+</tr>
+<tr>
+<td>111</td>
+<td>necrotic adrenal</td>
+</tr>
+<tr>
+<td>112</td>
+<td>gl. suprarenalis necrosis</td>
+</tr>
+<tr>
+<td>113</td>
+<td>fatty adrenal necrosis</td>
+</tr>
+<tr>
+<td>114</td>
+<td>Adrenomyodystrophy</td>
+</tr>
+<tr>
+<td>115</td>
+<td>Other specified hereditary sensory or autonomic neuropathy</td>
+</tr>
+<tr>
+<td>116</td>
+<td>Hereditary sensory and autonomic neuropathy type II</td>
+</tr>
+<tr>
+<td>117</td>
+<td>HSAN2 - [Hereditary sensory and autonomic neuropathy type 2]</td>
+</tr>
+<tr>
+<td>118</td>
+<td>Hereditary sensory and autonomic neuropathy type IIA</td>
+</tr>
+<tr>
+<td>119</td>
+<td>HSAN2A - [Hereditary sensory autonomic neuropathy type 2A]</td>
+</tr>
+<tr>
+<td>120</td>
+<td>Hereditary sensory and autonomic neuropathy type IIB</td>
+</tr>
+<tr>
+<td>121</td>
+<td>HSAN2B - [Hereditary sensory autonomic neuropathy type 2B]</td>
+</tr>
+<tr>
+<td>122</td>
+<td>Hereditary sensory and autonomic neuropathy type IIC</td>
+</tr>
+<tr>
+<td>123</td>
+<td>HSAN2C - [Hereditary sensory autonomic neuropathy type 2C]</td>
+</tr>
+<tr>
+<td>124</td>
+<td>Certain specified forms of hereditary sensory or autonomic neuropathy</td>
+</tr>
+<tr>
+<td>125</td>
+<td>Cold-induced sweating syndrome</td>
+</tr>
+<tr>
+<td>126</td>
+<td>Hereditary sensory and autonomic neuropathy with deafness or global delay</td>
+</tr>
+<tr>
+<td>127</td>
+<td>Hereditary sensory and autonomic neuropathy with spastic paraplegia</td>
+</tr>
+<tr>
+<td>128</td>
+<td>X-linked hereditary sensory and autonomic neuropathy with deafness</td>
+</tr>
+<tr>
+<td>129</td>
+<td>Duplications of the short arm of chromosome 17</td>
+</tr>
+<tr>
+<td>130</td>
+<td>17p duplication</td>
+</tr>
+<tr>
+<td>131</td>
+<td>17p duplication syndrome</td>
+</tr>
+<tr>
+<td>132</td>
+<td>17p13.3 duplication</td>
+</tr>
+<tr>
+<td>133</td>
+<td>17p13.3 duplication syndrome</td>
+</tr>
+<tr>
+<td>134</td>
+<td>Trisomy 17p13.3</td>
+</tr>
+<tr>
+<td>135</td>
+<td>Potocki-Lupski syndrome</td>
+</tr>
+<tr>
+<td>136</td>
+<td>Trisomy 17p11.2</td>
+</tr>
+<tr>
+<td>137</td>
+<td>17p11.2 duplication</td>
+</tr>
+<tr>
+<td>138</td>
+<td>Charcot-Marie-Tooth disease 1 autosomal dominant due to chromosome 17 duplication</td>
+</tr>
+<tr>
+<td>139</td>
+<td>Charcot-Marie-Tooth disease type 1A</td>
+</tr>
+<tr>
+<td>140</td>
+<td>Charcot Marie Tooth disease 1 autosomal dominant secondary to the chromosome 17 duplication</td>
+</tr>
+<tr>
+<td>141</td>
+<td>CMT1A - [Charcot-Marie-Tooth disease type 1A]</td>
+</tr>
+<tr>
+<td>142</td>
+<td>Oculocutaneous albinism</td>
+</tr>
+<tr>
+<td>143</td>
+<td>OCA - [Oculocutaneous albinism]</td>
+</tr>
+<tr>
+<td>144</td>
+<td>Oculocutaneous albinism type 1A</td>
+</tr>
+<tr>
+<td>145</td>
+<td>Tyrosinase-negative oculocutaneous albinism</td>
+</tr>
+<tr>
+<td>146</td>
+<td>Albino</td>
+</tr>
+<tr>
+<td>147</td>
+<td>OCA1A - [Oculocutaneous albinism type 1A]</td>
+</tr>
+<tr>
+<td>148</td>
+<td>Oculocutaneous albinism type 1B</td>
+</tr>
+<tr>
+<td>149</td>
+<td>OCA1B - [Oculocutaneous albinism type 1B]</td>
+</tr>
+<tr>
+<td>150</td>
+<td>Yellow oculocutaneous albinism</td>
+</tr>
+<tr>
+<td>151</td>
+<td>Oculocutaneous albinism, Amish type</td>
+</tr>
+<tr>
+<td>152</td>
+<td>Minimal pigment oculocutaneous albinism</td>
+</tr>
+<tr>
+<td>153</td>
+<td>Platinum oculocutaneous albinism</td>
+</tr>
+<tr>
+<td>154</td>
+<td>Temperature sensitive oculocutaneous albinism</td>
+</tr>
+<tr>
+<td>155</td>
+<td>OCA1-TS - [Temperature-sensitive oculocutaneous albinism]</td>
+</tr>
+<tr>
+<td>156</td>
+<td>Oculocutaneous albinism type 2</td>
+</tr>
+<tr>
+<td>157</td>
+<td>OCA2 - [Oculocutaneous albinism type 2]</td>
+</tr>
+<tr>
+<td>158</td>
+<td>Tyrosinase-positive oculocutaneous albinism</td>
+</tr>
+<tr>
+<td>159</td>
+<td>Brown oculocutaneous albinism</td>
+</tr>
+<tr>
+<td>160</td>
+<td>Oculocutaneous albinism type 3</td>
+</tr>
+<tr>
+<td>161</td>
+<td>Rufous oculocutaneous albinism</td>
+</tr>
+<tr>
+<td>162</td>
+<td>Red oculocutaneous albinism</td>
+</tr>
+<tr>
+<td>163</td>
+<td>Xanthous oculocutaneous albinism</td>
+</tr>
+<tr>
+<td>164</td>
+<td>Xanthism</td>
+</tr>
+<tr>
+<td>165</td>
+<td>OCA3 - [Oculocutaneous albinism type 3]</td>
+</tr>
+<tr>
+<td>166</td>
+<td>Oculocutaneous albinism type 4</td>
+</tr>
+<tr>
+<td>167</td>
+<td>OCA4 - [Oculocutaneous albinism type 4]</td>
+</tr>
+<tr>
+<td>168</td>
+<td>Hermansky-Pudlak syndrome</td>
+</tr>
+<tr>
+<td>169</td>
+<td>Albinism with haemorrhagic diathesis and pigmented reticuloendothelial cells</td>
+</tr>
+<tr>
+<td>170</td>
+<td>HPS - [Hermansky-Pudlak syndrome]</td>
+</tr>
+<tr>
+<td>171</td>
+<td>Hermansky-Pudlak syndrome type 7</td>
+</tr>
+<tr>
+<td>172</td>
+<td>HPS7 - [Hermansky-Pudlak syndrome type 7] (MIM 614076)</td>
+</tr>
+<tr>
+<td>173</td>
+<td>Hermansky-Pudlak syndrome type 8</td>
+</tr>
+<tr>
+<td>174</td>
+<td>HPS8 - [Hermansky-Pudlak syndrome type 8] (MIM 614077)</td>
+</tr>
+<tr>
+<td>175</td>
+<td>Hermansky-Pudlak syndrome type 9</td>
+</tr>
+<tr>
+<td>176</td>
+<td>Hermansky-Pudlak syndrome with neutropaenia</td>
+</tr>
+<tr>
+<td>177</td>
+<td>Hermansky-Pudlak syndrome type 2</td>
+</tr>
+<tr>
+<td>178</td>
+<td>HPS 2 - [Hermansky-Pudlak syndrome type 2] (MIM 608233)</td>
+</tr>
+<tr>
+<td>179</td>
+<td>Hermansky-Pudlak syndrome with pulmonary fibrosis</td>
+</tr>
+<tr>
+<td>180</td>
+<td>Hermansky-Pudlak syndrome without pulmonary fibrosis</td>
+</tr>
+<tr>
+<td>181</td>
+<td>HPS - [Hermansky-Pudlak syndrome] without pulmonary fibrosis</td>
+</tr>
+<tr>
+<td>182</td>
+<td>Chédiak-Higashi syndrome</td>
+</tr>
+<tr>
+<td>183</td>
+<td>Chediak-Higashi-Steinbrinck syndrome</td>
+</tr>
+<tr>
+<td>184</td>
+<td>Chediak-Steinbrinck syndrome</td>
+</tr>
+<tr>
+<td>185</td>
+<td>Béguez César syndrome</td>
+</tr>
+<tr>
+<td>186</td>
+<td>Steinbrinck anomaly</td>
+</tr>
+<tr>
+<td>187</td>
+<td>Oculocerebral syndrome with hypopigmentation</td>
+</tr>
+<tr>
+<td>188</td>
+<td>Cross syndrome</td>
+</tr>
+<tr>
+<td>189</td>
+<td>Gangliosidosis</td>
+</tr>
+<tr>
+<td>190</td>
+<td>GM1 gangliosidosis</td>
+</tr>
+<tr>
+<td>191</td>
+<td>Landing disease</td>
+</tr>
+<tr>
+<td>192</td>
+<td>GM1 gangliosidosis type 1</td>
+</tr>
+<tr>
+<td>193</td>
+<td>Generalised gangliosidosis</td>
+</tr>
+<tr>
+<td>194</td>
+<td>Infantile GM1 gangliosidosis</td>
+</tr>
+<tr>
+<td>195</td>
+<td>GM1 gangliosidosis type 2</td>
+</tr>
+<tr>
+<td>196</td>
+<td>Juvenile GM1 gangliosidosis</td>
+</tr>
+<tr>
+<td>197</td>
+<td>GM1 gangliosidosis type 3</td>
+</tr>
+<tr>
+<td>198</td>
+<td>Adult GM1 gangliosidosis</td>
+</tr>
+<tr>
+<td>199</td>
+<td>GM2 gangliosidosis</td>
+</tr>
+<tr>
+<td>200</td>
+<td>deficiency of beta-n-acetylhexosaminidase isoenzymes</td>
+</tr>
+<tr>
+<td>201</td>
+<td>GM&lt;sub&gt;2&lt;/sub&gt; gangliosidosis</td>
+</tr>
+<tr>
+<td>202</td>
+<td>GM 2 gangliosidosis NOS</td>
+</tr>
+<tr>
+<td>203</td>
+<td>Retinal dystrophy in GM2 gangliosidosis</td>
+</tr>
+<tr>
+<td>204</td>
+<td>Sandhoff disease</td>
+</tr>
+<tr>
+<td>205</td>
+<td>GM2 gangliosidosis type 2</td>
+</tr>
+<tr>
+<td>206</td>
+<td>GM2 gangliosidosis 0 variant</td>
+</tr>
+<tr>
+<td>207</td>
+<td>Hexosaminidase A and B deficiency</td>
+</tr>
+<tr>
+<td>208</td>
+<td>Total hexosaminidase deficiency</td>
+</tr>
+<tr>
+<td>209</td>
+<td>GM&gt;2&lt; gangliosidosis, type 2</td>
+</tr>
+<tr>
+<td>210</td>
+<td>GM&lt;sub&gt;2&lt;/sub&gt; gangliosidosis, type 2</td>
+</tr>
+<tr>
+<td>211</td>
+<td>Infantile Sandhoff disease</td>
+</tr>
+<tr>
+<td>212</td>
+<td>Total hexosaminidase deficiency, infantile form</td>
+</tr>
+<tr>
+<td>213</td>
+<td>infantile GM2 gangliosidosis</td>
+</tr>
+<tr>
+<td>214</td>
+<td>infantile GM&lt;sub&gt;2&lt;/sub&gt; gangliosidosis</td>
+</tr>
+<tr>
+<td>215</td>
+<td>infantile GM&gt;2&lt; gangliosidosis</td>
+</tr>
+<tr>
+<td>216</td>
+<td>Juvenile Sandhoff disease</td>
+</tr>
+<tr>
+<td>217</td>
+<td>Total hexosaminidase deficiency, juvenile form</td>
+</tr>
+<tr>
+<td>218</td>
+<td>juvenile GM2 gangliosidosis</td>
+</tr>
+<tr>
+<td>219</td>
+<td>juvenile GM&lt;sub&gt;2&lt;/sub&gt; gangliosidosis</td>
+</tr>
+<tr>
+<td>220</td>
+<td>juvenile GM&gt;2&lt; gangliosidosis</td>
+</tr>
+<tr>
+<td>221</td>
+<td>Adult Sandhoff disease</td>
+</tr>
+<tr>
+<td>222</td>
+<td>Total hexosaminidase deficiency, adult form</td>
+</tr>
+<tr>
+<td>223</td>
+<td>adult GM2 gangliosidosis</td>
+</tr>
+<tr>
+<td>224</td>
+<td>Tay-Sachs disease</td>
+</tr>
+<tr>
+<td>225</td>
+<td>GM2-gangliosidosis, B, B1, AB variant</td>
+</tr>
+<tr>
+<td>226</td>
+<td>Hexosaminidase A deficiency</td>
+</tr>
+<tr>
+<td>227</td>
+<td>severe hexosaminidase a deficiency</td>
+</tr>
+<tr>
+<td>228</td>
+<td>B variant of hexosaminidase A deficiency</td>
+</tr>
+<tr>
+<td>229</td>
+<td>B variant of hexosaminidase A deficiency, infantile form</td>
+</tr>
+<tr>
+<td>230</td>
+<td>Classic infantile acute Tay-Sachs disease</td>
+</tr>
+<tr>
+<td>231</td>
+<td>GM2 gangliosidosis type 1</td>
+</tr>
+<tr>
+<td>232</td>
+<td>GM&lt;sub&gt;2&lt;/sub&gt; gangliosidosis, type 1</td>
+</tr>
+<tr>
+<td>233</td>
+<td>GM&gt;2&lt; gangliosidosis, type 1</td>
+</tr>
+<tr>
+<td>234</td>
+<td>B variant of hexosaminidase A deficiency, juvenile form</td>
+</tr>
+<tr>
+<td>235</td>
+<td>Juvenile subacute Tay-Sachs disease</td>
+</tr>
+<tr>
+<td>236</td>
+<td>GM2 gangliosidosis type 3</td>
+</tr>
+<tr>
+<td>237</td>
+<td>GM&lt;sub&gt;2&lt;/sub&gt; gangliosidosis, type 3</td>
+</tr>
+<tr>
+<td>238</td>
+<td>GM&gt;2&lt; gangliosidosis, type 3</td>
+</tr>
+<tr>
+<td>239</td>
+<td>B variant of hexosaminidase A deficiency, adult form</td>
+</tr>
+<tr>
+<td>240</td>
+<td>Adult Tay-Sachs disease</td>
+</tr>
+<tr>
+<td>241</td>
+<td>Chronic GM2 gangliosidosis</td>
+</tr>
+<tr>
+<td>242</td>
+<td>B1 variant of hexosaminidase A deficiency</td>
+</tr>
+<tr>
+<td>243</td>
+<td>Late infantile Tay-Sachs disease</td>
+</tr>
+<tr>
+<td>244</td>
+<td>Pseudo-AB variant of hexosaminidase deficiency</td>
+</tr>
+<tr>
+<td>245</td>
+<td>Hexosaminidase activator deficiency</td>
+</tr>
+<tr>
+<td>246</td>
+<td>GM2 activator deficiency</td>
+</tr>
+<tr>
+<td>247</td>
+<td>AB variant of hexosaminidase deficiency</td>
+</tr>
+<tr>
+<td>248</td>
+<td>Primary hypercholesterolaemia</td>
+</tr>
+<tr>
+<td>249</td>
+<td>low-density-lipoid-type hyperlipoproteinemia</td>
+</tr>
+<tr>
+<td>250</td>
+<td>pure hypercholesterolaemia</td>
+</tr>
+<tr>
+<td>251</td>
+<td>LDL - [low density lipoprotein} hyperlipoproteinemia</td>
+</tr>
+<tr>
+<td>252</td>
+<td>group A hyperlipidaemia</td>
+</tr>
+<tr>
+<td>253</td>
+<td>pure hypercholesterinaemia</td>
+</tr>
+<tr>
+<td>254</td>
+<td>cholesterolaemia</td>
+</tr>
+<tr>
+<td>255</td>
+<td>essential cholesterolaemia</td>
+</tr>
+<tr>
+<td>256</td>
+<td>essential hypercholesterolaemia</td>
+</tr>
+<tr>
+<td>257</td>
+<td>group A hyperlipemia</td>
+</tr>
+<tr>
+<td>258</td>
+<td>increased low density lipoprotein</td>
+</tr>
+<tr>
+<td>259</td>
+<td>low-density-lipoprotein-type</td>
+</tr>
+<tr>
+<td>260</td>
+<td>low-density-lipoprotein-type hyperlipoproteinemia</td>
+</tr>
+<tr>
+<td>261</td>
+<td>Familial hypercholesterolaemia</td>
+</tr>
+<tr>
+<td>262</td>
+<td>Hypercholesterolaemia due to LDL receptor deficiency</td>
+</tr>
+<tr>
+<td>263</td>
+<td>low density lipoprotein catabolic defect</td>
+</tr>
+<tr>
+<td>264</td>
+<td>low density lipoprotein receptor disorder</td>
+</tr>
+<tr>
+<td>265</td>
+<td>familial hypercholesterinaemia</td>
+</tr>
+<tr>
+<td>266</td>
+<td>essential familial hypercholesterolaemia</td>
+</tr>
+<tr>
+<td>267</td>
+<td>hereditary cholesterolaemia</td>
+</tr>
+<tr>
+<td>268</td>
+<td>hereditary hypercholesterinaemia</td>
+</tr>
+<tr>
+<td>269</td>
+<td>hereditary hypercholesterolaemia</td>
+</tr>
+<tr>
+<td>270</td>
+<td>familial hyperbetalipoproteinaemia</td>
+</tr>
+<tr>
+<td>271</td>
+<td>Fredrickson 2A</td>
+</tr>
+<tr>
+<td>272</td>
+<td>Fredrickson type 2A hyperlipoproteinemia</td>
+</tr>
+<tr>
+<td>273</td>
+<td>familial cholesterolaemia</td>
+</tr>
+<tr>
+<td>274</td>
+<td>Familial hypercholesterolaemia - heterozygous</td>
+</tr>
+<tr>
+<td>275</td>
+<td>Familial hypercholesterolaemia - homozygous</td>
+</tr>
+<tr>
+<td>276</td>
+<td>Familial hypercholesterolemic xanthomatosis</td>
+</tr>
+<tr>
+<td>277</td>
+<td>Familial defective apolipoprotein B-100</td>
+</tr>
+<tr>
+<td>278</td>
+<td>Autosomal recessive hypercholesterolaemia</td>
+</tr>
+<tr>
+<td>279</td>
+<td>Autosomal dominant hypercholesterolaemia</td>
+</tr>
+<tr>
+<td>280</td>
+<td>Polygenic hypercholesterolaemia</td>
+</tr>
+<tr>
+<td>281</td>
+<td>Hyperbetalipoproteinaemia</td>
+</tr>
+<tr>
+<td>282</td>
+<td>Interrupted aortic arch</td>
+</tr>
+<tr>
+<td>283</td>
+<td>aorta atresia</td>
+</tr>
+<tr>
+<td>284</td>
+<td>aortic arch interruption</td>
+</tr>
+<tr>
+<td>285</td>
+<td>IAA - [interrupted aortic arch]</td>
+</tr>
+<tr>
+<td>286</td>
+<td>aorta arch atresia</td>
+</tr>
+<tr>
+<td>287</td>
+<td>aorta ring atresia</td>
+</tr>
+<tr>
+<td>288</td>
+<td>aortic arch atresia</td>
+</tr>
+<tr>
+<td>289</td>
+<td>aortic ring atresia</td>
+</tr>
+<tr>
+<td>290</td>
+<td>Interrupted aortic arch distal to subclavian artery, type A</td>
+</tr>
+<tr>
+<td>291</td>
+<td>aortic arch interruption, type A</td>
+</tr>
+<tr>
+<td>292</td>
+<td>IAA type A - [interrupted aortic arch type A]</td>
+</tr>
+<tr>
+<td>293</td>
+<td>Interrupted aortic arch between subclavian and common carotid arteries, type B</td>
+</tr>
+<tr>
+<td>294</td>
+<td>aortic arch interruption, type B</td>
+</tr>
+<tr>
+<td>295</td>
+<td>IAA type B - [interrupted aortic arch type B]</td>
+</tr>
+<tr>
+<td>296</td>
+<td>Aortic interruption, type B</td>
+</tr>
+<tr>
+<td>297</td>
+<td>Interruption of the aortic arch, type B</td>
+</tr>
+<tr>
+<td>298</td>
+<td>Interrupted aortic arch between carotid arteries, type C</td>
+</tr>
+<tr>
+<td>299</td>
+<td>aortic arch interruption, type C</td>
+</tr>
+<tr>
+<td>300</td>
+<td>IAA type C - [interrupted aortic arch type C]</td>
+</tr>
+<tr>
+<td>301</td>
+<td>Aortic interruption, type C</td>
+</tr>
+<tr>
+<td>302</td>
+<td>Interruption of the aortic arch, type C</td>
+</tr>
+<tr>
+<td>303</td>
+<td>Glycogen storage disease</td>
+</tr>
+<tr>
+<td>304</td>
+<td>Glycogenosis</td>
+</tr>
+<tr>
+<td>305</td>
+<td>GSD - [Glycogen storage disease]</td>
+</tr>
+<tr>
+<td>306</td>
+<td>glycogen thesaurismosis</td>
+</tr>
+<tr>
+<td>307</td>
+<td>diffuse glycogenosis</td>
+</tr>
+<tr>
+<td>308</td>
+<td>generalised glycogen storage disease</td>
+</tr>
+<tr>
+<td>309</td>
+<td>generalised glycogenosis</td>
+</tr>
+<tr>
+<td>310</td>
+<td>generalised glycogen storage disease of infants</td>
+</tr>
+<tr>
+<td>311</td>
+<td>glycogen synthase deficiency</td>
+</tr>
+<tr>
+<td>312</td>
+<td>Glycogen storage disease due to glycogen synthase deficiency</td>
+</tr>
+<tr>
+<td>313</td>
+<td>Glycogen storage disease type 0</td>
+</tr>
+<tr>
+<td>314</td>
+<td>Glycogenosis type 0</td>
+</tr>
+<tr>
+<td>315</td>
+<td>GSD type 0</td>
+</tr>
+<tr>
+<td>316</td>
+<td>deficiency of glycogen synthetase</td>
+</tr>
+<tr>
+<td>317</td>
+<td>Glycogen storage disease due to liver glycogen synthase deficiency</td>
+</tr>
+<tr>
+<td>318</td>
+<td>GSD type 0A</td>
+</tr>
+<tr>
+<td>319</td>
+<td>Glycogen storage disease type 0A</td>
+</tr>
+<tr>
+<td>320</td>
+<td>Glycogenosis type 0A</td>
+</tr>
+<tr>
+<td>321</td>
+<td>Glycogen storage disease due to muscle or heart glycogen synthase deficiency</td>
+</tr>
+<tr>
+<td>322</td>
+<td>Glycogen storage disease type 0B</td>
+</tr>
+<tr>
+<td>323</td>
+<td>Glycogenosis type 0B</td>
+</tr>
+<tr>
+<td>324</td>
+<td>GSD type 0B</td>
+</tr>
+<tr>
+<td>325</td>
+<td>Cardiomyopathy-exercise intolerance due to muscle and heart glycogen deficiency</td>
+</tr>
+<tr>
+<td>326</td>
+<td>Glycogen storage disease due to glucose-6-phosphate system deficiency</td>
+</tr>
+<tr>
+<td>327</td>
+<td>Glycogen storage disease type 1</td>
+</tr>
+<tr>
+<td>328</td>
+<td>Glycogenosis type 1</td>
+</tr>
+<tr>
+<td>329</td>
+<td>GSD type 1</td>
+</tr>
+<tr>
+<td>330</td>
+<td>Hepatorenal glycogenosis</td>
+</tr>
+<tr>
+<td>331</td>
+<td>Von Gierke disease</td>
+</tr>
+<tr>
+<td>332</td>
+<td>HERS - [hepatorenal glycogen storage disease]</td>
+</tr>
+<tr>
+<td>333</td>
+<td>glycogen storage disease of liver and kidney</td>
+</tr>
+<tr>
+<td>334</td>
+<td>hepatorenal glycogen storage disease</td>
+</tr>
+<tr>
+<td>335</td>
+<td>Glycogen storage disease due to glucose-6-phosphatase deficiency</td>
+</tr>
+<tr>
+<td>336</td>
+<td>Glycogen storage disease type 1A</td>
+</tr>
+<tr>
+<td>337</td>
+<td>Glycogenosis type 1A</td>
+</tr>
+<tr>
+<td>338</td>
+<td>GSD type 1A</td>
+</tr>
+<tr>
+<td>339</td>
+<td>g6pd - [glucose-6-phosphate dehydrogenase deficiency]</td>
+</tr>
+<tr>
+<td>340</td>
+<td>glucose-6-phosphatase deficiency</td>
+</tr>
+<tr>
+<td>341</td>
+<td>deficiency of g-6pd</td>
+</tr>
+<tr>
+<td>342</td>
+<td>Glycogen storage disease due to glucose-6-phosphate transport defect</td>
+</tr>
+<tr>
+<td>343</td>
+<td>Glycogen storage disease type 1B</td>
+</tr>
+<tr>
+<td>344</td>
+<td>Glycogenosis type 1B</td>
+</tr>
+<tr>
+<td>345</td>
+<td>GSD1B</td>
+</tr>
+<tr>
+<td>346</td>
+<td>Glycogen storage disease type non-1A</td>
+</tr>
+<tr>
+<td>347</td>
+<td>Glycogenosis type non-1A</td>
+</tr>
+<tr>
+<td>348</td>
+<td>Glycogen storage disease due to glucose-6-phosphate translocase deficiency</td>
+</tr>
+<tr>
+<td>349</td>
+<td>Glucose-6-phosphate dehydrogenase deficiency</td>
+</tr>
+<tr>
+<td>350</td>
+<td>Glycogen storage disease due to acid maltase deficiency</td>
+</tr>
+<tr>
+<td>351</td>
+<td>Glycogen storage disease type 2</td>
+</tr>
+<tr>
+<td>352</td>
+<td>Glycogenosis type 2</td>
+</tr>
+<tr>
+<td>353</td>
+<td>GSD type 2</td>
+</tr>
+<tr>
+<td>354</td>
+<td>Acid maltase deficiency</td>
+</tr>
+<tr>
+<td>355</td>
+<td>Pompe disease</td>
+</tr>
+<tr>
+<td>356</td>
+<td>Acid alpha-1,4-glucosidase deficiency</td>
+</tr>
+<tr>
+<td>357</td>
+<td>alpha-glucosidase deficiency</td>
+</tr>
+<tr>
+<td>358</td>
+<td>deficiency of amyloglucosidase</td>
+</tr>
+<tr>
+<td>359</td>
+<td>Glycogen storage disease due to acid maltase deficiency, infantile onset</td>
+</tr>
+<tr>
+<td>360</td>
+<td>Glycogen storage disease type 2, infantile onset</td>
+</tr>
+<tr>
+<td>361</td>
+<td>Glycogenosis type 2, infantile onset</td>
+</tr>
+<tr>
+<td>362</td>
+<td>GSD2, infantile onset</td>
+</tr>
+<tr>
+<td>363</td>
+<td>Glycogen storage disease due to acid alpha-1,4-glucosidase deficiency, infantile onset</td>
+</tr>
+<tr>
+<td>364</td>
+<td>Infantile Pompe disease</td>
+</tr>
+<tr>
+<td>365</td>
+<td>lysosomal alpha-1,4-glucosidase deficiency (disorder)</td>
+</tr>
+<tr>
+<td>366</td>
+<td>Glycogen storage disease due to acid maltase deficiency, juvenile onset</td>
+</tr>
+<tr>
+<td>367</td>
+<td>Glycogen storage disease due to acid maltase deficiency, adult onset</td>
+</tr>
+<tr>
+<td>368</td>
+<td>Deficiency of exo-1,4-alpha-glucosidase</td>
+</tr>
+<tr>
+<td>369</td>
+<td>Deficiency of glucan 1,4-alpha-glucosidase</td>
+</tr>
+<tr>
+<td>370</td>
+<td>Deficiency of gamma-amylase</td>
+</tr>
+<tr>
+<td>371</td>
+<td>Deficiency of glucoamylase</td>
+</tr>
+<tr>
+<td>372</td>
+<td>Deficiency of glucoinvertase</td>
+</tr>
+<tr>
+<td>373</td>
+<td>Deficiency of glucosidosucrase</td>
+</tr>
+<tr>
+<td>374</td>
+<td>Deficiency of maltase</td>
+</tr>
+<tr>
+<td>375</td>
+<td>Glycogen storage disease due to LAMP-2 deficiency</td>
+</tr>
+<tr>
+<td>376</td>
+<td>Glycogen storage disease type 2B</td>
+</tr>
+<tr>
+<td>377</td>
+<td>Glycogenosis type 2B</td>
+</tr>
+<tr>
+<td>378</td>
+<td>GSD type 2B</td>
+</tr>
+<tr>
+<td>379</td>
+<td>Lysosomal glycogen storage disease with normal acid maltase activity</td>
+</tr>
+<tr>
+<td>380</td>
+<td>Danon disease</td>
+</tr>
+<tr>
+<td>381</td>
+<td>Glycogen storage disease due to glycogen debranching enzyme deficiency</td>
+</tr>
+<tr>
+<td>382</td>
+<td>Glycogen storage disease type 3</td>
+</tr>
+<tr>
+<td>383</td>
+<td>Glycogenosis type 3</td>
+</tr>
+<tr>
+<td>384</td>
+<td>GSD type 3</td>
+</tr>
+<tr>
+<td>385</td>
+<td>Amylo-1,6-glucosidase deficiency</td>
+</tr>
+<tr>
+<td>386</td>
+<td>Glycogen debranching deficiency</td>
+</tr>
+<tr>
+<td>387</td>
+<td>Cori-Forbes disease</td>
+</tr>
+<tr>
+<td>388</td>
+<td>Cori disease</td>
+</tr>
+<tr>
+<td>389</td>
+<td>Forbes disease</td>
+</tr>
+<tr>
+<td>390</td>
+<td>Forbes glycogen storage disease</td>
+</tr>
+<tr>
+<td>391</td>
+<td>debrancher deficiency glycogen storage disease</td>
+</tr>
+<tr>
+<td>392</td>
+<td>debrancher enzyme deficiency</td>
+</tr>
+<tr>
+<td>393</td>
+<td>deficiency of 6-alpha-d-glucosidase</td>
+</tr>
+<tr>
+<td>394</td>
+<td>amylo-1,6-glucosidase deficiency disorder</td>
+</tr>
+<tr>
+<td>395</td>
+<td>Glycogen storage disease due to muscle glycogen phosphorylase deficiency</td>
+</tr>
+<tr>
+<td>396</td>
+<td>Glycogen storage disease type 5</td>
+</tr>
+<tr>
+<td>397</td>
+<td>Glycogenosis type 5</td>
+</tr>
+<tr>
+<td>398</td>
+<td>GSD type 5</td>
+</tr>
+<tr>
+<td>399</td>
+<td>Myophosphorylase deficiency</td>
+</tr>
+<tr>
+<td>400</td>
+<td>McArdle disease</td>
+</tr>
+<tr>
+<td>401</td>
+<td>myophosphorylase deficiency glycogenosis</td>
+</tr>
+<tr>
+<td>402</td>
+<td>Glycogen storage disease due to liver glycogen phosphorylase deficiency</td>
+</tr>
+<tr>
+<td>403</td>
+<td>Glycogenosis due to liver phosphorylase deficiency</td>
+</tr>
+<tr>
+<td>404</td>
+<td>Glycogen storage disease type 6</td>
+</tr>
+<tr>
+<td>405</td>
+<td>Glycogenosis type 6</td>
+</tr>
+<tr>
+<td>406</td>
+<td>GSD type 6</td>
+</tr>
+<tr>
+<td>407</td>
+<td>Glycogen storage disease type 6B</td>
+</tr>
+<tr>
+<td>408</td>
+<td>Glycogenosis type 6B</td>
+</tr>
+<tr>
+<td>409</td>
+<td>GSD type 6B</td>
+</tr>
+<tr>
+<td>410</td>
+<td>Hers disease</td>
+</tr>
+<tr>
+<td>411</td>
+<td>deficiency of hepatophosphorylase</td>
+</tr>
+<tr>
+<td>412</td>
+<td>Glycogen storage disease due to muscle phosphofructokinase deficiency</td>
+</tr>
+<tr>
+<td>413</td>
+<td>Glycogen storage disease type 7</td>
+</tr>
+<tr>
+<td>414</td>
+<td>Glycogenosis type 7</td>
+</tr>
+<tr>
+<td>415</td>
+<td>GSD type 7</td>
+</tr>
+<tr>
+<td>416</td>
+<td>Muscle phosphofructokinase deficiency</td>
+</tr>
+<tr>
+<td>417</td>
+<td>Tarui disease</td>
+</tr>
+<tr>
+<td>418</td>
+<td>anaemia due to phosphofructo-aldolase deficiency</td>
+</tr>
+<tr>
+<td>419</td>
+<td>Glycogen storage disease due to glycogen phosphorylase kinase deficiency</td>
+</tr>
+<tr>
+<td>420</td>
+<td>Glycogenosis due to phosphorylase kinase deficiency</td>
+</tr>
+<tr>
+<td>421</td>
+<td>GSD due to phosphorylase kinase deficiency</td>
+</tr>
+<tr>
+<td>422</td>
+<td>Glycogen storage disease due to liver glycogen phosphorylase kinase deficiency</td>
+</tr>
+<tr>
+<td>423</td>
+<td>Hepatic phosphorylase kinase deficiency</td>
+</tr>
+<tr>
+<td>424</td>
+<td>Glycogen storage disease type 8</td>
+</tr>
+<tr>
+<td>425</td>
+<td>Glycogenosis type 8</td>
+</tr>
+<tr>
+<td>426</td>
+<td>GSD8 - [glycogen storage disease type 8]</td>
+</tr>
+<tr>
+<td>427</td>
+<td>Glycogen storage disease type 6A</td>
+</tr>
+<tr>
+<td>428</td>
+<td>Glycogen storage disease type 9A</td>
+</tr>
+<tr>
+<td>429</td>
+<td>Glycogen storage disease type 9C</td>
+</tr>
+<tr>
+<td>430</td>
+<td>Glycogenosis type 6A</td>
+</tr>
+<tr>
+<td>431</td>
+<td>Glycogenosis type 9A</td>
+</tr>
+<tr>
+<td>432</td>
+<td>Glycogenosis type 9C</td>
+</tr>
+<tr>
+<td>433</td>
+<td>GSD type 9C - [glycogen storage disease type 9C]</td>
+</tr>
+<tr>
+<td>434</td>
+<td>GSD6A - [glycogen storage disease type 6A]</td>
+</tr>
+<tr>
+<td>435</td>
+<td>GSD9A - [glycogen storage disease type 9A]</td>
+</tr>
+<tr>
+<td>436</td>
+<td>Glycogen storage disease due to liver or muscle glycogen phosphorylase kinase deficiency</td>
+</tr>
+<tr>
+<td>437</td>
+<td>Glycogen storage disease type 9B</td>
+</tr>
+<tr>
+<td>438</td>
+<td>Glycogenosis type 9B</td>
+</tr>
+<tr>
+<td>439</td>
+<td>GSD type 9B</td>
+</tr>
+<tr>
+<td>440</td>
+<td>Glycogen storage disease type 9</td>
+</tr>
+<tr>
+<td>441</td>
+<td>Glycogenosis type 9</td>
+</tr>
+<tr>
+<td>442</td>
+<td>GSD9 - [glycogen storage disease type 9]</td>
+</tr>
+<tr>
+<td>443</td>
+<td>Glycogen storage disease due to heart glycogen phosphorylase kinase deficiency</td>
+</tr>
+<tr>
+<td>444</td>
+<td>Glycogen storage disease of heart</td>
+</tr>
+<tr>
+<td>445</td>
+<td>Cardiac glycogenosis</td>
+</tr>
+<tr>
+<td>446</td>
+<td>Glycogen storage disease type 9F</td>
+</tr>
+<tr>
+<td>447</td>
+<td>Glycogenosis type 9F</td>
+</tr>
+<tr>
+<td>448</td>
+<td>GSD9F</td>
+</tr>
+<tr>
+<td>449</td>
+<td>glycogen heart disease</td>
+</tr>
+<tr>
+<td>450</td>
+<td>glycogenic myocardial infiltration</td>
+</tr>
+<tr>
+<td>451</td>
+<td>glycogenic myocardium infiltration</td>
+</tr>
+<tr>
+<td>452</td>
+<td>cardiomegalia glycogenica diffusa</td>
+</tr>
+<tr>
+<td>453</td>
+<td>Glycogen storage disease due to muscle glycogen phosphorylase kinase deficiency</td>
+</tr>
+<tr>
+<td>454</td>
+<td>GSD9D - [glycogen storage disease type IXD]</td>
+</tr>
+<tr>
+<td>455</td>
+<td>Glycogen storage disease type 9D</td>
+</tr>
+<tr>
+<td>456</td>
+<td>Glycogen storage disease type 9E</td>
+</tr>
+<tr>
+<td>457</td>
+<td>Glycogenosis type 9D</td>
+</tr>
+<tr>
+<td>458</td>
+<td>Glycogenosis type 9E</td>
+</tr>
+<tr>
+<td>459</td>
+<td>GSD9E</td>
+</tr>
+<tr>
+<td>460</td>
+<td>muscle glycogen phosphorylase deficiency</td>
+</tr>
+<tr>
+<td>461</td>
+<td>glycogenosis type IXE</td>
+</tr>
+<tr>
+<td>462</td>
+<td>Glycogen storage disease due to muscle phosphoglycerate mutase deficiency</td>
+</tr>
+<tr>
+<td>463</td>
+<td>Glycogen storage disease type 10</td>
+</tr>
+<tr>
+<td>464</td>
+<td>Glycogenosis type 10</td>
+</tr>
+<tr>
+<td>465</td>
+<td>GSD type 10</td>
+</tr>
+<tr>
+<td>466</td>
+<td>Di Mauro disease</td>
+</tr>
+<tr>
+<td>467</td>
+<td>Glycogen storage disease due to GLUT2 deficiency</td>
+</tr>
+<tr>
+<td>468</td>
+<td>Glycogen storage disease type 11</td>
+</tr>
+<tr>
+<td>469</td>
+<td>Glycogenosis type 11</td>
+</tr>
+<tr>
+<td>470</td>
+<td>GSD type 11</td>
+</tr>
+<tr>
+<td>471</td>
+<td>Fanconi-Bickel glycogenosis</td>
+</tr>
+<tr>
+<td>472</td>
+<td>Bickel-Fanconi disease</td>
+</tr>
+<tr>
+<td>473</td>
+<td>Facilitated glucose transporter protein type 2 deficiency</td>
+</tr>
+<tr>
+<td>474</td>
+<td>Fanconi-Bickel syndrome</td>
+</tr>
+<tr>
+<td>475</td>
+<td>Glycogen storage disease due to aldolase A deficiency</td>
+</tr>
+<tr>
+<td>476</td>
+<td>Glycogen storage disease type 12</td>
+</tr>
+<tr>
+<td>477</td>
+<td>Glycogenosis type 12</td>
+</tr>
+<tr>
+<td>478</td>
+<td>GSD type 12</td>
+</tr>
+<tr>
+<td>479</td>
+<td>Glycogen storage disease due to muscle beta-enolase deficiency</td>
+</tr>
+<tr>
+<td>480</td>
+<td>Glycogen storage disease type 13</td>
+</tr>
+<tr>
+<td>481</td>
+<td>Glycogenosis type 13</td>
+</tr>
+<tr>
+<td>482</td>
+<td>GSD type 13</td>
+</tr>
+<tr>
+<td>483</td>
+<td>Glycogen storage disease due to phosphoglucomutase deficiency</td>
+</tr>
+<tr>
+<td>484</td>
+<td>Glycogen storage disease type 14</td>
+</tr>
+<tr>
+<td>485</td>
+<td>Glycogenosis type 14</td>
+</tr>
+<tr>
+<td>486</td>
+<td>GSD type 14</td>
+</tr>
+<tr>
+<td>487</td>
+<td>Glycogen storage disease due to glycogenin deficiency</td>
+</tr>
+<tr>
+<td>488</td>
+<td>Glycogen storage disease type 15</td>
+</tr>
+<tr>
+<td>489</td>
+<td>GSD type 15</td>
+</tr>
+<tr>
+<td>490</td>
+<td>Glocogenosis type 15</td>
+</tr>
+<tr>
+<td>491</td>
+<td>Glycogen storage disease due to phosphoglycerate kinase 1 deficiency</td>
+</tr>
+<tr>
+<td>492</td>
+<td>Glycogenosis due to phosphoglycerate kinase 1 deficiency</td>
+</tr>
+<tr>
+<td>493</td>
+<td>GSD due to phosphoglycerate kinase 1 deficiency</td>
+</tr>
+<tr>
+<td>494</td>
+<td>Glycogen storage disease due to lactate dehydrogenase deficiency</td>
+</tr>
+<tr>
+<td>495</td>
+<td>Glycogenosis due to lactate dehydrogenase deficiency</td>
+</tr>
+<tr>
+<td>496</td>
+<td>GSD due to lactate dehydrogenase deficiency</td>
+</tr>
+<tr>
+<td>497</td>
+<td>Glycogen storage disease due to muscle pyruvate kinase deficiency</td>
+</tr>
+<tr>
+<td>498</td>
+<td>Glycogenosis due to muscle pyruvate kinase deficiency</td>
+</tr>
+<tr>
+<td>499</td>
+<td>GSD due to muscle pyruvate kinase deficiency</td>
+</tr>
+<tr>
+<td>500</td>
+<td>Glycogen storage liver disease</td>
+</tr>
+<tr>
+<td>501</td>
+<td>hepatomegalia glycogenica diffusa</td>
+</tr>
+<tr>
+<td>502</td>
+<td>liver glycogen disease</td>
+</tr>
+<tr>
+<td>503</td>
+<td>liver phosphorylase deficiency</td>
+</tr>
+<tr>
+<td>504</td>
+<td>Glycogen storage disease due to branching-transferase deficiency</td>
+</tr>
+<tr>
+<td>505</td>
+<td>Andersen disease</td>
+</tr>
+<tr>
+<td>506</td>
+<td>brancher deficiency glycogen storage disease</td>
+</tr>
+<tr>
+<td>507</td>
+<td>branching enzyme deficiency</td>
+</tr>
+<tr>
+<td>508</td>
+<td>branching-transferase deficiency glycogenosis</td>
+</tr>
+<tr>
+<td>509</td>
+<td>deficiency of 1,4-alpha-glucan branching enzyme</td>
+</tr>
+<tr>
+<td>510</td>
+<td>deficiency of amylo-(1,4,6)-transglycosylase</td>
+</tr>
+<tr>
+<td>511</td>
+<td>Glycogen storage disease type 4</td>
+</tr>
+<tr>
+<td>512</td>
+<td>Glycogenosis type 4</td>
+</tr>
+<tr>
+<td>513</td>
+<td>GSD- [Glycogen storage disease] type 4</td>
+</tr>
+<tr>
+<td>514</td>
+<td>Dilated cardiomyopathy due to glycogen branching enzyme deficiency</td>
+</tr>
+<tr>
+<td>515</td>
+<td>Amylopectinosis</td>
+</tr>
+<tr>
+<td>516</td>
+<td>dilated cardiomyopathy due to Andersen's disease</td>
+</tr>
+<tr>
+<td>517</td>
+<td>dilated cardiomyopathy due to glycogen storage disease type 4 (GSD4)</td>
+</tr>
+<tr>
+<td>518</td>
+<td>Dystonia-plus</td>
+</tr>
+<tr>
+<td>519</td>
+<td>Myoclonus-dystonia</td>
+</tr>
+<tr>
+<td>520</td>
+<td>Dopa-responsive dystonia</td>
+</tr>
+<tr>
+<td>521</td>
+<td>Segawa syndrome</td>
+</tr>
+<tr>
+<td>522</td>
+<td>DYT5</td>
+</tr>
+<tr>
+<td>523</td>
+<td>DRD - [dopa-responsive dystonia]</td>
+</tr>
+<tr>
+<td>524</td>
+<td>Autosomal dominant dopa-responsive dystonia</td>
+</tr>
+<tr>
+<td>525</td>
+<td>Hereditary progressive dystonia with marked diurnal fluctuation</td>
+</tr>
+<tr>
+<td>526</td>
+<td>Autosomal dominant Segawa syndrome</td>
+</tr>
+<tr>
+<td>527</td>
+<td>DYT5a</td>
+</tr>
+<tr>
+<td>528</td>
+<td>HPD - [ hereditary progressive dystonia] with marked diurnal fluctuation</td>
+</tr>
+<tr>
+<td>529</td>
+<td>Autosomal dominant DRD - [dopa-responsive dystonia]</td>
+</tr>
+<tr>
+<td>530</td>
+<td>Autosomal recessive dopa-responsive dystonia</td>
+</tr>
+<tr>
+<td>531</td>
+<td>Autosomal recessive Segawa syndrome</td>
+</tr>
+<tr>
+<td>532</td>
+<td>Autosomal recessive DRD - [dopa-responsive dystonia]</td>
+</tr>
+<tr>
+<td>533</td>
+<td>Tyrosine hydroxylase deficiency</td>
+</tr>
+<tr>
+<td>534</td>
+<td>Mucopolysaccharidosis type 2</td>
+</tr>
+<tr>
+<td>535</td>
+<td>Iduronate 2-sulfatase deficiency</td>
+</tr>
+<tr>
+<td>536</td>
+<td>Hunter syndrome</td>
+</tr>
+<tr>
+<td>537</td>
+<td>iduronate 2-sulphatase deficiency</td>
+</tr>
+<tr>
+<td>538</td>
+<td>iduronate sulfatase deficiency</td>
+</tr>
+<tr>
+<td>539</td>
+<td>iduronate sulphatase deficiency</td>
+</tr>
+<tr>
+<td>540</td>
+<td>sulfo-iduronate sulfatase deficiency</td>
+</tr>
+<tr>
+<td>541</td>
+<td>sulfoiduronidate sulfatase deficiency</td>
+</tr>
+<tr>
+<td>542</td>
+<td>sulpho-iduronate sulphatase deficiency</td>
+</tr>
+<tr>
+<td>543</td>
+<td>sulphoiduronidate sulphatase deficiency</td>
+</tr>
+<tr>
+<td>544</td>
+<td>MPS2 - [mucopolysaccharidosis 2]</td>
+</tr>
+<tr>
+<td>545</td>
+<td>Mucopolysaccharidosis type 2A</td>
+</tr>
+<tr>
+<td>546</td>
+<td>Iduronate 2-sulfatase deficiency type A</td>
+</tr>
+<tr>
+<td>547</td>
+<td>Hunter syndrome type A</td>
+</tr>
+<tr>
+<td>548</td>
+<td>Mucopolysaccharidosis type 2, severe form</td>
+</tr>
+<tr>
+<td>549</td>
+<td>Mucopolysaccharidosis type 2B</td>
+</tr>
+<tr>
+<td>550</td>
+<td>Iduronate 2-sulfatase deficiency type B</td>
+</tr>
+<tr>
+<td>551</td>
+<td>Hunter syndrome type B</td>
+</tr>
+<tr>
+<td>552</td>
+<td>Mucopolysaccharidosis type 2, mild form</td>
+</tr>
+<tr>
+<td>553</td>
+<td>Mucopolysaccharidosis type 2, attenuated form</td>
+</tr>
+<tr>
+<td>554</td>
+<td>Other specified structural developmental anomaly of heart or great vessels</td>
+</tr>
+<tr>
+<td>555</td>
+<td>Congenital anomaly of position or spatial relationships of thoraco-abdominal organs</td>
+</tr>
+<tr>
+<td>556</td>
+<td>Usual atrial arrangement</td>
+</tr>
+<tr>
+<td>557</td>
+<td>atrial situs solitus</td>
+</tr>
+<tr>
+<td>558</td>
+<td>Abnormal atrial arrangement</td>
+</tr>
+<tr>
+<td>559</td>
+<td>Abnormal atrial situs</td>
+</tr>
+<tr>
+<td>560</td>
+<td>Atrial situs inversus</td>
+</tr>
+<tr>
+<td>561</td>
+<td>Mirror-image atrial arrangement</td>
+</tr>
+<tr>
+<td>562</td>
+<td>Isomerism of right atrial appendages</td>
+</tr>
+<tr>
+<td>563</td>
+<td>isomeric right atrial appendages</td>
+</tr>
+<tr>
+<td>564</td>
+<td>Isomerism of left atrial appendages</td>
+</tr>
+<tr>
+<td>565</td>
+<td>isomeric left atrial appendages</td>
+</tr>
+<tr>
+<td>566</td>
+<td>Abnormal relationship of great arterial roots</td>
+</tr>
+<tr>
+<td>567</td>
+<td>Abnormal relationships of great arteries</td>
+</tr>
+<tr>
+<td>568</td>
+<td>Abnormal relationships of great vessels</td>
+</tr>
+<tr>
+<td>569</td>
+<td>Aortic root directly anterior to pulmonary root</td>
+</tr>
+<tr>
+<td>570</td>
+<td>A-malposed aorta</td>
+</tr>
+<tr>
+<td>571</td>
+<td>A-malposed great arteries</td>
+</tr>
+<tr>
+<td>572</td>
+<td>Aorta directly anterior to pulmonary artery</td>
+</tr>
+<tr>
+<td>573</td>
+<td>A-transposed aorta</td>
+</tr>
+<tr>
+<td>574</td>
+<td>Aortic root anterior and rightward to pulmonary root</td>
+</tr>
+<tr>
+<td>575</td>
+<td>D-malposed great vessels with anterior aorta</td>
+</tr>
+<tr>
+<td>576</td>
+<td>Dextroposed great arteries with anterior aorta</td>
+</tr>
+<tr>
+<td>577</td>
+<td>Dextroposed great vessels with anterior aorta</td>
+</tr>
+<tr>
+<td>578</td>
+<td>D-malposed great arteries with anterior aorta</td>
+</tr>
+<tr>
+<td>579</td>
+<td>D-transposed great arteries</td>
+</tr>
+<tr>
+<td>580</td>
+<td>D-transposed great vessels</td>
+</tr>
+<tr>
+<td>581</td>
+<td>Aortic root anterior and leftward to pulmonary root</td>
+</tr>
+<tr>
+<td>582</td>
+<td>L-malposed great vessels with anterior aorta</td>
+</tr>
+<tr>
+<td>583</td>
+<td>L-malposed great arteries with anterior aorta</td>
+</tr>
+<tr>
+<td>584</td>
+<td>Levoposed great arteries with anterior aorta</td>
+</tr>
+<tr>
+<td>585</td>
+<td>Levoposed great vessels with anterior aorta</td>
+</tr>
+<tr>
+<td>586</td>
+<td>L-transposed great arteries with anterior aorta</td>
+</tr>
+<tr>
+<td>587</td>
+<td>L-transposed great vessels with anterior aorta</td>
+</tr>
+<tr>
+<td>588</td>
+<td>Aortic root side by side and directly rightward to pulmonary root</td>
+</tr>
+<tr>
+<td>589</td>
+<td>D-transposed side by side great arteries</td>
+</tr>
+<tr>
+<td>590</td>
+<td>D-transposed side by side great vessels</td>
+</tr>
+<tr>
+<td>591</td>
+<td>Dextroposed side by side great arteries</td>
+</tr>
+<tr>
+<td>592</td>
+<td>Dextroposed side by side great vessels</td>
+</tr>
+<tr>
+<td>593</td>
+<td>D-malposed side by side great arteries</td>
+</tr>
+<tr>
+<td>594</td>
+<td>Aortic root side by side and directly leftward to pulmonary root</td>
+</tr>
+<tr>
+<td>595</td>
+<td>L-transposed side by side great vessels</td>
+</tr>
+<tr>
+<td>596</td>
+<td>L-malposed side by side great vessels</td>
+</tr>
+<tr>
+<td>597</td>
+<td>L-malposed side by side great arteries</td>
+</tr>
+<tr>
+<td>598</td>
+<td>Levoposed side by side great vessels</td>
+</tr>
+<tr>
+<td>599</td>
+<td>Levoposed side by side great arteries</td>
+</tr>
+<tr>
+<td>600</td>
+<td>L-transposed side by side great arteries</td>
+</tr>
+<tr>
+<td>601</td>
+<td>Aortic root directly posterior to pulmonary root</td>
+</tr>
+<tr>
+<td>602</td>
+<td>Aortic root posterior and rightward to pulmonary root</td>
+</tr>
+<tr>
+<td>603</td>
+<td>d-malposed great arteries with posterior aorta</td>
+</tr>
+<tr>
+<td>604</td>
+<td>normally related great arteries</td>
+</tr>
+<tr>
+<td>605</td>
+<td>segmental analysis D with posterior aorta</td>
+</tr>
+<tr>
+<td>606</td>
+<td>Aortic root posterior and leftward to pulmonary root</td>
+</tr>
+<tr>
+<td>607</td>
+<td>L-malposed great arteries with posterior aorta</td>
+</tr>
+<tr>
+<td>608</td>
+<td>L-malposed great vessels with posterior aorta</td>
+</tr>
+<tr>
+<td>609</td>
+<td>Mirror imaged normally related great arteries</td>
+</tr>
+<tr>
+<td>610</td>
+<td>Levoposed great arteries with posterior aorta</td>
+</tr>
+<tr>
+<td>611</td>
+<td>Levoposed great vessels with posterior aorta</td>
+</tr>
+<tr>
+<td>612</td>
+<td>Mirror imaged normally related great vessels</td>
+</tr>
+<tr>
+<td>613</td>
+<td>Abnormal intrapericardial course of great arteries</td>
+</tr>
+<tr>
+<td>614</td>
+<td>Spiralling course of great arteries</td>
+</tr>
+<tr>
+<td>615</td>
+<td>Normal course of great arteries</td>
+</tr>
+<tr>
+<td>616</td>
+<td>Parallel course of great arteries</td>
+</tr>
+<tr>
+<td>617</td>
+<td>Visceral heterotaxy</td>
+</tr>
+<tr>
+<td>618</td>
+<td>Abnormal arrangement of thoraco-abdominal organs</td>
+</tr>
+<tr>
+<td>619</td>
+<td>Heterotaxy</td>
+</tr>
+<tr>
+<td>620</td>
+<td>Heterotaxia</td>
+</tr>
+<tr>
+<td>621</td>
+<td>Heterotaxia syndrome</td>
+</tr>
+<tr>
+<td>622</td>
+<td>Situs ambiguous</td>
+</tr>
+<tr>
+<td>623</td>
+<td>Splenic syndromes</td>
+</tr>
+<tr>
+<td>624</td>
+<td>Heterotaxy syndrome</td>
+</tr>
+<tr>
+<td>625</td>
+<td>Congenital anomaly of an atrium or atrial septum</td>
+</tr>
+<tr>
+<td>626</td>
+<td>congenital atrial malformation</td>
+</tr>
+<tr>
+<td>627</td>
+<td>cor triatriatum (deprecated)</td>
+</tr>
+<tr>
+<td>628</td>
+<td>Aortic aneurysm due to congenital heart disease</td>
+</tr>
+<tr>
+<td>629</td>
+<td>Aortic aneurysm secondary to congenital heart disease</td>
+</tr>
+<tr>
+<td>630</td>
+<td>Congenital heart block</td>
+</tr>
+<tr>
+<td>631</td>
+<td>Congenital complete heart block</td>
+</tr>
+<tr>
+<td>632</td>
+<td>Immune-mediated heart block</td>
+</tr>
+<tr>
+<td>633</td>
+<td>Accessory heart</td>
+</tr>
+<tr>
+<td>634</td>
+<td>Congenital cardiac dilatation</td>
+</tr>
+<tr>
+<td>635</td>
+<td>acute congenital heart dilatation</td>
+</tr>
+<tr>
+<td>636</td>
+<td>chronic congenital cardiac dilatation</td>
+</tr>
+<tr>
+<td>637</td>
+<td>chronic congenital heart dilatation</td>
+</tr>
+<tr>
+<td>638</td>
+<td>congenital cardiac valve dilatation</td>
+</tr>
+<tr>
+<td>639</td>
+<td>Anomalous bands of heart</td>
+</tr>
+<tr>
+<td>640</td>
+<td>anomaly of heart bands or folds</td>
+</tr>
+<tr>
+<td>641</td>
+<td>Bifid apex of heart</td>
+</tr>
+<tr>
+<td>642</td>
+<td>Congenital cardiomegaly</td>
+</tr>
+<tr>
+<td>643</td>
+<td>Congenital microcardia</td>
+</tr>
+<tr>
+<td>644</td>
+<td>Other specified mucopolysaccharidosis</td>
+</tr>
+<tr>
+<td>645</td>
+<td>Mucopolysaccharidosis type 3</td>
+</tr>
+<tr>
+<td>646</td>
+<td>Acetyl-CoA alpha-glucosaminide-N-acetyl transferase deficiency</td>
+</tr>
+<tr>
+<td>647</td>
+<td>N-acetyl-alpha-glucosaminidase sulfamidase deficiency</td>
+</tr>
+<tr>
+<td>648</td>
+<td>N-acetyl-glucosamine-6-sulfate sulfatase deficiency</td>
+</tr>
+<tr>
+<td>649</td>
+<td>Sanfilippo syndrome</td>
+</tr>
+<tr>
+<td>650</td>
+<td>Mucopolysaccharidosis type 3A</td>
+</tr>
+<tr>
+<td>651</td>
+<td>Sanfilippo syndrome type A</td>
+</tr>
+<tr>
+<td>652</td>
+<td>Heparan-N-sulfatase deficiency</td>
+</tr>
+<tr>
+<td>653</td>
+<td>Heparan sulfamidase deficiency</td>
+</tr>
+<tr>
+<td>654</td>
+<td>Heparan sulfate sulfatase deficiency</td>
+</tr>
+<tr>
+<td>655</td>
+<td>Mucopolysaccharidosis type 3B</td>
+</tr>
+<tr>
+<td>656</td>
+<td>Sanfilippo syndrome type B</td>
+</tr>
+<tr>
+<td>657</td>
+<td>Alpha-N-acetylglucosaminidase deficiency</td>
+</tr>
+<tr>
+<td>658</td>
+<td>N-acetyl-alpha-D-glucosaminidase deficiency</td>
+</tr>
+<tr>
+<td>659</td>
+<td>Mucopolysaccharidosis type 3C</td>
+</tr>
+<tr>
+<td>660</td>
+<td>Sanfilippo syndrome type C</td>
+</tr>
+<tr>
+<td>661</td>
+<td>Acetyl-CoA alpha-glucosaminide acetyltransferase deficiency</td>
+</tr>
+<tr>
+<td>662</td>
+<td>N-acetyl transferase deficiency</td>
+</tr>
+<tr>
+<td>663</td>
+<td>Mucopolysaccharidosis type 3D</td>
+</tr>
+<tr>
+<td>664</td>
+<td>Sanfilippo syndrome type D</td>
+</tr>
+<tr>
+<td>665</td>
+<td>N-acetylglucosamine-6-sulfate sulfatase deficiency</td>
+</tr>
+<tr>
+<td>666</td>
+<td>Mucopolysaccharidosis type 7</td>
+</tr>
+<tr>
+<td>667</td>
+<td>Beta-glucuronidase deficiency</td>
+</tr>
+<tr>
+<td>668</td>
+<td>Sly disease</td>
+</tr>
+<tr>
+<td>669</td>
+<td>Sly syndrome</td>
+</tr>
+<tr>
+<td>670</td>
+<td>Mucopolysaccharidosis type 9</td>
+</tr>
+<tr>
+<td>671</td>
+<td>Hyaluronidase deficiency</td>
+</tr>
+<tr>
+<td>672</td>
+<td>Natowicz syndrome</td>
+</tr>
+<tr>
+<td>673</td>
+<td>Vitamin A deficiency with other specified manifestations</td>
+</tr>
+<tr>
+<td>674</td>
+<td>Phrynoderma</td>
+</tr>
+<tr>
+<td>675</td>
+<td>Certain specified ocular manifestations of vitamin A deficiency</td>
+</tr>
+<tr>
+<td>676</td>
+<td>Vitamin A deficiency with xerophthalmia</td>
+</tr>
+<tr>
+<td>677</td>
+<td>xerophthalmia</td>
+</tr>
+<tr>
+<td>678</td>
+<td>Xerophthalmia NOS</td>
+</tr>
+<tr>
+<td>679</td>
+<td>Follicular keratosis due to vitamin A deficiency</td>
+</tr>
+<tr>
+<td>680</td>
+<td>Xeroderma due to vitamin A deficiency</td>
+</tr>
+<tr>
+<td>681</td>
+<td>Mucopolysaccharidosis type 4</td>
+</tr>
+<tr>
+<td>682</td>
+<td>Galactosamine-6-sulfatase deficiency</td>
+</tr>
+<tr>
+<td>683</td>
+<td>Morquio syndrome</td>
+</tr>
+<tr>
+<td>684</td>
+<td>Morquio-Brailsford disease</td>
+</tr>
+<tr>
+<td>685</td>
+<td>Mucopolysaccharidosis type 4A</td>
+</tr>
+<tr>
+<td>686</td>
+<td>Galactose-6-sulfatase deficiency</td>
+</tr>
+<tr>
+<td>687</td>
+<td>Galactosamide-6-sulfatase deficiency</td>
+</tr>
+<tr>
+<td>688</td>
+<td>Morquio syndrome type A</td>
+</tr>
+<tr>
+<td>689</td>
+<td>Mucopolysaccharidosis type 4B</td>
+</tr>
+<tr>
+<td>690</td>
+<td>Beta-D-galactosidase deficiency</td>
+</tr>
+<tr>
+<td>691</td>
+<td>Morquio syndrome type B</td>
+</tr>
+<tr>
+<td>692</td>
+<td>Disorders of protein N-glycosylation</td>
+</tr>
+<tr>
+<td>693</td>
+<td>Phosphomannomutase 2 deficiency</td>
+</tr>
+<tr>
+<td>694</td>
+<td>Carbohydrate deficient glycoprotein syndrome type 1A</td>
+</tr>
+<tr>
+<td>695</td>
+<td>Congenital disorder of glycosylation type 1A</td>
+</tr>
+<tr>
+<td>696</td>
+<td>CDG - [Congenital disorder of glycosylation] syndrome type 1A</td>
+</tr>
+<tr>
+<td>697</td>
+<td>Phosphomannose isomerase deficiency</td>
+</tr>
+<tr>
+<td>698</td>
+<td>Saguenay-Lac-Saint-Jean syndrome</td>
+</tr>
+<tr>
+<td>699</td>
+<td>Carbohydrate deficient glycoprotein syndrome type 1B</td>
+</tr>
+<tr>
+<td>700</td>
+<td>Congenital disorder of glycosylation type 1B</td>
+</tr>
+<tr>
+<td>701</td>
+<td>CDG - [Congenital disorder of glycosylation] syndrome type 1B</td>
+</tr>
+<tr>
+<td>702</td>
+<td>SLSJ - [Saguenay-Lac-Saint-Jean] syndrome</td>
+</tr>
+<tr>
+<td>703</td>
+<td>Glucosyltransferase 1 deficiency</td>
+</tr>
+<tr>
+<td>704</td>
+<td>Dol-P-Glc: Man9-GlcNAc2-P-P-Dol glucosyltransferase deficiency</td>
+</tr>
+<tr>
+<td>705</td>
+<td>Carbohydrate deficient glycoprotein syndrome type 1C</td>
+</tr>
+<tr>
+<td>706</td>
+<td>Congenital disorder of glycosylation type 1C</td>
+</tr>
+<tr>
+<td>707</td>
+<td>CDG - [Congenital disorder of glycosylation] syndrome type 1C</td>
+</tr>
+<tr>
+<td>708</td>
+<td>Mannosyltransferase 6 deficiency</td>
+</tr>
+<tr>
+<td>709</td>
+<td>Dol-P-Man: Man5-GlcNAc2-P-P-Dol mannosyltransferase deficiency</td>
+</tr>
+<tr>
+<td>710</td>
+<td>Carbohydrate deficient glycoprotein syndrome type 1D</td>
+</tr>
+<tr>
+<td>711</td>
+<td>Congenital disorder of glycosylation type 1D</td>
+</tr>
+<tr>
+<td>712</td>
+<td>CDG - [Congenital disorder of glycosylation] syndrome type 1D</td>
+</tr>
+<tr>
+<td>713</td>
+<td>Mannosyltransferase 8 deficiency</td>
+</tr>
+<tr>
+<td>714</td>
+<td>Dol-P-Man: Man7-GlcNAc2-P-P-Dol mannosyltransferase deficiency</td>
+</tr>
+<tr>
+<td>715</td>
+<td>Carbohydrate deficient glycoprotein syndrome type 1G</td>
+</tr>
+<tr>
+<td>716</td>
+<td>Congenital disorder of glycosylation type 1G</td>
+</tr>
+<tr>
+<td>717</td>
+<td>CDG - [Congenital disorder of glycosylation] syndrome type 1G</td>
+</tr>
+<tr>
+<td>718</td>
+<td>Glucosyltransferase 2 deficiency</td>
+</tr>
+<tr>
+<td>719</td>
+<td>Dol-P-Glc: Glc1-Man9-GlcNAc2-P-P-Dol glucosyltransferase deficiency</td>
+</tr>
+<tr>
+<td>720</td>
+<td>Carbohydrate deficient glycoprotein syndrome 1H</td>
+</tr>
+<tr>
+<td>721</td>
+<td>Congenital disorder of glycosylation type 1H</td>
+</tr>
+<tr>
+<td>722</td>
+<td>CDG - [[Congenital disorder of glycosylation] syndrome type 1H</td>
+</tr>
+<tr>
+<td>723</td>
+<td>Mannosyltransferase 2 deficiency</td>
+</tr>
+<tr>
+<td>724</td>
+<td>Dol-P-Man: Man1-GlcNAc2-P-P-Dol mannosyltransferase deficiency</td>
+</tr>
+<tr>
+<td>725</td>
+<td>Carbohydrate deficient glycoprotein syndrome 1I</td>
+</tr>
+<tr>
+<td>726</td>
+<td>Congenital disorder of glycosylation 1I</td>
+</tr>
+<tr>
+<td>727</td>
+<td>CDG - [Congenital disorder of glycosylation] syndrome type 1I</td>
+</tr>
+<tr>
+<td>728</td>
+<td>Dolichyl-phosphate N-acetylgalactosamine phosphotransferase deficiency</td>
+</tr>
+<tr>
+<td>729</td>
+<td>UDP-GlcNAc: Dol-P-GlcNac-P transferase deficiency</td>
+</tr>
+<tr>
+<td>730</td>
+<td>Carbohydrate deficient glycoprotein syndrome type 1J</td>
+</tr>
+<tr>
+<td>731</td>
+<td>Congenital disorder of glycosylation type 1J</td>
+</tr>
+<tr>
+<td>732</td>
+<td>CDG - [[Congenital disorder of glycosylation] syndrome type 1J</td>
+</tr>
+<tr>
+<td>733</td>
+<td>Mannosyltransferase 1 deficiency</td>
+</tr>
+<tr>
+<td>734</td>
+<td>Dol-P-Man: GlcNAc2-P-P-Dol mannosyltransferase deficiency</td>
+</tr>
+<tr>
+<td>735</td>
+<td>Carbohydrate deficient glycoprotein syndrome type 1K</td>
+</tr>
+<tr>
+<td>736</td>
+<td>Congenital disorder of glycosylation type 1K</td>
+</tr>
+<tr>
+<td>737</td>
+<td>CDG - [[Congenital disorder of glycosylation] syndrome type 1K</td>
+</tr>
+<tr>
+<td>738</td>
+<td>Mannosyltransferase 7-9 deficiency</td>
+</tr>
+<tr>
+<td>739</td>
+<td>Congenital disorder of glycosylation type 1L</td>
+</tr>
+<tr>
+<td>740</td>
+<td>Dol-P-Man: Man6 and Man8-GlcNAc2-P-P-Dol mannosyltransferase deficiency</td>
+</tr>
+<tr>
+<td>741</td>
+<td>Carbohydrate deficient glycoprotein syndrome type 1L</td>
+</tr>
+<tr>
+<td>742</td>
+<td>CDG - [[Congenital disorder of glycosylation] syndrome type 1L</td>
+</tr>
+<tr>
+<td>743</td>
+<td>M5-DLO flippase deficiency</td>
+</tr>
+<tr>
+<td>744</td>
+<td>Man5GlcNAc2-PP-Dol flippase deficiency</td>
+</tr>
+<tr>
+<td>745</td>
+<td>RTF1-CDG</td>
+</tr>
+<tr>
+<td>746</td>
+<td>CDG - [Congenital disorder of glycosylation] syndrome type 1N</td>
+</tr>
+<tr>
+<td>747</td>
+<td>N-acetylglucosaminyltransferase deficiency</td>
+</tr>
+<tr>
+<td>748</td>
+<td>Carbohydrate deficient glycoprotein syndrome type 2A</td>
+</tr>
+<tr>
+<td>749</td>
+<td>Congenital disorder of glycosylation type 2A</td>
+</tr>
+<tr>
+<td>750</td>
+<td>CDG - [[Congenital disorder of glycosylation] syndrome type 2A</td>
+</tr>
+<tr>
+<td>751</td>
+<td>Glucosidase 1 deficiency</td>
+</tr>
+<tr>
+<td>752</td>
+<td>Carbohydrate deficient glycoprotein syndrome type 2B</td>
+</tr>
+<tr>
+<td>753</td>
+<td>Congenital disorder of glycosylation type 2B</td>
+</tr>
+<tr>
+<td>754</td>
+<td>CDG - [Congenital disorder of glycosylation] syndrome type 2B</td>
+</tr>
+<tr>
+<td>755</td>
+<td>TUSC3 congenital disorder of glycosylation</td>
+</tr>
+<tr>
+<td>756</td>
+<td>TUSC3-CDG</td>
+</tr>
+<tr>
+<td>757</td>
+<td>SRD5A3 congenital disorder of glycosylation</td>
+</tr>
+<tr>
+<td>758</td>
+<td>SRD5A3-CDG</td>
+</tr>
+<tr>
+<td>759</td>
+<td>Congenital disorder of glycosylation due to steroid 5-alpha-reductase type 3 deficiency</td>
+</tr>
+<tr>
+<td>760</td>
+<td>Intellectual deficit - cataract - coloboma - kyphosis</td>
+</tr>
+<tr>
+<td>761</td>
+<td>Kahrizi syndrome</td>
+</tr>
+<tr>
+<td>762</td>
+<td>Intellectual deficit, Kahrizi type</td>
+</tr>
+<tr>
+<td>763</td>
+<td>DPM3 congenital disorder of glycosylation</td>
+</tr>
+<tr>
+<td>764</td>
+<td>Congenital disorder of glycosylation type 1O</td>
+</tr>
+<tr>
+<td>765</td>
+<td>Carbohydrate deficient glycoprotein syndrome type 1O</td>
+</tr>
+<tr>
+<td>766</td>
+<td>CDG - [Congenital disorder of glycosylation] syndrome type 1O</td>
+</tr>
+<tr>
+<td>767</td>
+<td>ALG11 congenital disorder of glycosylation</td>
+</tr>
+<tr>
+<td>768</td>
+<td>CDG - [Congenital disorder of glycosylation] syndrome type 1P</td>
+</tr>
+<tr>
+<td>769</td>
+<td>Carbohydrate deficient glycoprotein syndrome type 1P</td>
+</tr>
+<tr>
+<td>770</td>
+<td>Congenital disorder of glycosylation type 1P</td>
+</tr>
+<tr>
+<td>771</td>
+<td>Phosphoglucomutase-1 deficiency</td>
+</tr>
+<tr>
+<td>772</td>
+<td>PGM1-CDG - [Phosphoglucomutase-1 deficiency]</td>
+</tr>
+<tr>
+<td>773</td>
+<td>Congenital disorder of glycosylation type 1t</td>
+</tr>
+<tr>
+<td>774</td>
+<td>Certain specified disorders of arteries or arterioles</td>
+</tr>
+<tr>
+<td>775</td>
+<td>Aortic dilatation - joint hypermobility - arterial tortuosity</td>
+</tr>
+<tr>
+<td>776</td>
+<td>Generalised arterial calcification of infancy</td>
+</tr>
+<tr>
+<td>777</td>
+<td>Median arcuate ligament syndrome</td>
+</tr>
+<tr>
+<td>778</td>
+<td>Aortic root abscess</td>
+</tr>
+<tr>
+<td>779</td>
+<td>Periaortic abscess</td>
+</tr>
+<tr>
+<td>780</td>
+<td>Acquired deformity of aorta</td>
+</tr>
+<tr>
+<td>781</td>
+<td>acquired aorta arch deformity</td>
+</tr>
+<tr>
+<td>782</td>
+<td>acquired aorta deformity</td>
+</tr>
+<tr>
+<td>783</td>
+<td>acquired aortic arch deformity</td>
+</tr>
+<tr>
+<td>784</td>
+<td>acquired aortic deformity</td>
+</tr>
+<tr>
+<td>785</td>
+<td>Acquired deformity of renal artery</td>
+</tr>
+<tr>
+<td>786</td>
+<td>acquired deformity of kidney artery</td>
+</tr>
+<tr>
+<td>787</td>
+<td>Arterial abscess</td>
+</tr>
+<tr>
+<td>788</td>
+<td>artery wall abscess</td>
+</tr>
+<tr>
+<td>789</td>
+<td>arterial wall abscess</td>
+</tr>
+<tr>
+<td>790</td>
+<td>artery abscess</td>
+</tr>
+<tr>
+<td>791</td>
+<td>Arterial hypertrophy</td>
+</tr>
+<tr>
+<td>792</td>
+<td>artery hypertrophy</td>
+</tr>
+<tr>
+<td>793</td>
+<td>Erosion of artery</td>
+</tr>
+<tr>
+<td>794</td>
+<td>artery erosion</td>
+</tr>
+<tr>
+<td>795</td>
+<td>erosion arterial</td>
+</tr>
+<tr>
+<td>796</td>
+<td>Fatty degeneration of aorta</td>
+</tr>
+<tr>
+<td>797</td>
+<td>fatty aorta degeneration</td>
+</tr>
+<tr>
+<td>798</td>
+<td>fatty aortic degeneration</td>
+</tr>
+<tr>
+<td>799</td>
+<td>Hyperplasia of renal artery</td>
+</tr>
+<tr>
+<td>800</td>
+<td>renal arterial hyperplasia</td>
+</tr>
+<tr>
+<td>801</td>
+<td>renal artery hyperplasia</td>
+</tr>
+<tr>
+<td>802</td>
+<td>FMH - [fibromuscular hyperplasia, of renal artery]</td>
+</tr>
+<tr>
+<td>803</td>
+<td>Fibromuscular hyperplasia of renal artery</td>
+</tr>
+<tr>
+<td>804</td>
+<td>a. renalis; hyperplasia</td>
+</tr>
+<tr>
+<td>805</td>
+<td>Renal vasculitis</td>
+</tr>
+<tr>
+<td>806</td>
+<td>vasculitis kidney</td>
+</tr>
+<tr>
+<td>807</td>
+<td>Ulcer of artery</td>
+</tr>
+<tr>
+<td>808</td>
+<td>arterial ulcer</td>
+</tr>
+<tr>
+<td>809</td>
+<td>artery ulcer</td>
+</tr>
+<tr>
+<td>810</td>
+<td>Obliterative arteriolar disease</td>
+</tr>
+<tr>
+<td>811</td>
+<td>Arteriovenous fistula, not elsewhere classified</td>
+</tr>
+<tr>
+<td>812</td>
+<td>arteriovenous fistula NOS</td>
+</tr>
+<tr>
+<td>813</td>
+<td>Disorders of nucleotide metabolism</td>
+</tr>
+<tr>
+<td>814</td>
+<td>Aicardi-Goutières syndrome</td>
+</tr>
+<tr>
+<td>815</td>
+<td>Encephalopathy with basal ganglia calcification</td>
+</tr>
+<tr>
+<td>816</td>
+<td>Encephalopathy with intracranial calcification and chronic lymphocytosis of cerebrospinal fluid</td>
+</tr>
+<tr>
+<td>817</td>
+<td>Aicardi-Goutières syndrome type 1</td>
+</tr>
+<tr>
+<td>818</td>
+<td>TREX deficiency</td>
+</tr>
+<tr>
+<td>819</td>
+<td>DNase III deficiency</td>
+</tr>
+<tr>
+<td>820</td>
+<td>Aicardi-Goutières syndrome type 2</td>
+</tr>
+<tr>
+<td>821</td>
+<td>RNASEH2B deficiency</td>
+</tr>
+<tr>
+<td>822</td>
+<td>Aicardi-Goutières syndrome type 3</td>
+</tr>
+<tr>
+<td>823</td>
+<td>RNASEH2C deficiency</td>
+</tr>
+<tr>
+<td>824</td>
+<td>Aicardi-Goutières syndrome type 4</td>
+</tr>
+<tr>
+<td>825</td>
+<td>RNASEH2A deficiency</td>
+</tr>
+<tr>
+<td>826</td>
+<td>Aicardi-Goutières syndrome type 5</td>
+</tr>
+<tr>
+<td>827</td>
+<td>SAMHD1deficiency</td>
+</tr>
+<tr>
+<td>828</td>
+<td>Cystic leukoencephalopathy without megalencephaly</td>
+</tr>
+<tr>
+<td>829</td>
+<td>RNASET2-deficient cystic leukoencephalopathy</td>
+</tr>
+<tr>
+<td>830</td>
+<td>Insulin-resistance syndromes</td>
+</tr>
+<tr>
+<td>831</td>
+<td>Insulin-resistance syndrome type A</td>
+</tr>
+<tr>
+<td>832</td>
+<td>Insulin-resistance syndrome type B</td>
+</tr>
+<tr>
+<td>833</td>
+<td>Rabson-Mendenhall syndrome</td>
+</tr>
+<tr>
+<td>834</td>
+<td>Laminopathy type Decaudain-Vigouroux</td>
+</tr>
+<tr>
+<td>835</td>
+<td>Laminopathy with severe metabolic syndrome and myopathy</td>
+</tr>
+<tr>
+<td>836</td>
+<td>Leprechaunism</td>
+</tr>
+<tr>
+<td>837</td>
+<td>Donohue syndrome</td>
+</tr>
+<tr>
+<td>838</td>
+<td>HAIR-AN syndrome</td>
+</tr>
+<tr>
+<td>839</td>
+<td>HAIR-AN - [hyperandrogenic-insulin resistance-acanthosis nigricans] syndrome</td>
+</tr>
+<tr>
+<td>840</td>
+<td>Insulin resistance - short fifth metacarpals</td>
+</tr>
+<tr>
+<td>841</td>
+<td>Berardinelli-Seip congenital lipodystrophy</td>
+</tr>
+<tr>
+<td>842</td>
+<td>Berardinelli-Seip syndrome</td>
+</tr>
+<tr>
+<td>843</td>
+<td>Lipoatrophic diabetes</td>
+</tr>
+<tr>
+<td>844</td>
+<td>Brunzell syndrome</td>
+</tr>
+<tr>
+<td>845</td>
+<td>Berardinelli type lipodystrophy</td>
+</tr>
+<tr>
+<td>846</td>
+<td>BSCL - [Berardinelli-Seip congenital lipodystrophy]</td>
+</tr>
+<tr>
+<td>847</td>
+<td>Familial partial lipodystrophy</td>
+</tr>
+<tr>
+<td>848</td>
+<td>Hereditary partial lipodystrophy</td>
+</tr>
+<tr>
+<td>849</td>
+<td>Familial partial lipodystrophy, Köbberling type</td>
+</tr>
+<tr>
+<td>850</td>
+<td>Familial partial lipodystrophy type 1</td>
+</tr>
+<tr>
+<td>851</td>
+<td>FPLD1 - [Familial partial lipodystrophy type 1]</td>
+</tr>
+<tr>
+<td>852</td>
+<td>Familial partial lipodystrophy, Dunnigan type</td>
+</tr>
+<tr>
+<td>853</td>
+<td>Familial partial lipodystrophy type 2</td>
+</tr>
+<tr>
+<td>854</td>
+<td>Dunnigan syndrome</td>
+</tr>
+<tr>
+<td>855</td>
+<td>FPLD2 - [Familial partial lipodystrophy type 2]</td>
+</tr>
+<tr>
+<td>856</td>
+<td>Familial partial lipodystrophy associated with PPARG mutations</td>
+</tr>
+<tr>
+<td>857</td>
+<td>Familial partial lipodystrophy type 3</td>
+</tr>
+<tr>
+<td>858</td>
+<td>FPLD3 - [Familial partial lipodystrophy type 3]</td>
+</tr>
+<tr>
+<td>859</td>
+<td>Familial partial lipodystrophy due to AKT2 mutations</td>
+</tr>
+<tr>
+<td>860</td>
+<td>Familial partial lipodystrophy due to lamin-A mutations</td>
+</tr>
+<tr>
+<td>861</td>
+<td>Severe lipodystrophic laminopathy</td>
+</tr>
+<tr>
+<td>862</td>
+<td>Familial partial lipodystrophy associated with PLIN1 mutations</td>
+</tr>
+<tr>
+<td>863</td>
+<td>Acquired generalised lipodystrophy</td>
+</tr>
+<tr>
+<td>864</td>
+<td>Metabolic syndrome</td>
+</tr>
+<tr>
+<td>865</td>
+<td>metabolic syndrome NOS</td>
+</tr>
+<tr>
+<td>866</td>
+<td>Testicular hypofunction</td>
+</tr>
+<tr>
+<td>867</td>
+<td>hypofunction testicle</td>
+</tr>
+<tr>
+<td>868</td>
+<td>gonadal insufficiency of testis</td>
+</tr>
+<tr>
+<td>869</td>
+<td>Testicular hypogonadism NOS</td>
+</tr>
+<tr>
+<td>870</td>
+<td>undeveloped testis</td>
+</tr>
+<tr>
+<td>871</td>
+<td>testicular hypogonadism</td>
+</tr>
+<tr>
+<td>872</td>
+<td>male hypogonadism</td>
+</tr>
+<tr>
+<td>873</td>
+<td>prepuberal castrate syndrome</td>
+</tr>
+<tr>
+<td>874</td>
+<td>eunuchoidism</td>
+</tr>
+<tr>
+<td>875</td>
+<td>deficiency of testicular hormone</td>
+</tr>
+<tr>
+<td>876</td>
+<td>androgen deficiency</td>
+</tr>
+<tr>
+<td>877</td>
+<td>5-alpha-reductase deficiency with male pseudohermaphroditism</td>
+</tr>
+<tr>
+<td>878</td>
+<td>defect of testicular androgen synthesis</td>
+</tr>
+<tr>
+<td>879</td>
+<td>5-alpha-reductase deficiency</td>
+</tr>
+<tr>
+<td>880</td>
+<td>Male infertility due to a systemic disease</td>
+</tr>
+<tr>
+<td>881</td>
+<td>Male infertility with normal virilization due to a systemic disease</td>
+</tr>
+<tr>
+<td>882</td>
+<td>Male infertility with normal virilization due to acquired testicular defects</td>
+</tr>
+<tr>
+<td>883</td>
+<td>Defective biosynthesis of testosterone in aged men</td>
+</tr>
+<tr>
+<td>884</td>
+<td>Testicular hypogonadism in aged men</td>
+</tr>
+<tr>
+<td>885</td>
+<td>defective biosynthesis of testicular androgen</td>
+</tr>
+<tr>
+<td>886</td>
+<td>Defective biosynthesis of testicular androgen NOS</td>
+</tr>
+<tr>
+<td>887</td>
+<td>deficiency of testosterone biosynthesis</td>
+</tr>
+<tr>
+<td>888</td>
+<td>Male infertility associated with autoimmunity</td>
+</tr>
+<tr>
+<td>889</td>
+<td>Male infertility with normal virilisation due to acquired testicular defect associated with autoimmunity</td>
+</tr>
+<tr>
+<td>890</td>
+<td>Male infertility associated with drug</td>
+</tr>
+<tr>
+<td>891</td>
+<td>Male infertility with normal virilisation due to acquired testicular defect associated with drug</td>
+</tr>
+<tr>
+<td>892</td>
+<td>Drug induced testicular hypofunction</td>
+</tr>
+<tr>
+<td>893</td>
+<td>Male infertility associated with environmental toxin</td>
+</tr>
+<tr>
+<td>894</td>
+<td>Male infertility with normal virilisation due to acquired testicular defect associated with environmental toxin</td>
+</tr>
+<tr>
+<td>895</td>
+<td>Male infertility associated with mycoplasma infection</td>
+</tr>
+<tr>
+<td>896</td>
+<td>Male infertility associated with radiation</td>
+</tr>
+<tr>
+<td>897</td>
+<td>Male infertility with normal virilisation due to acquired testicular defect associated with radiation</td>
+</tr>
+<tr>
+<td>898</td>
+<td>Male infertility associated with spinal cord injury</td>
+</tr>
+<tr>
+<td>899</td>
+<td>Male infertility with normal virilisation due to testicular defect associated with spinal cord injury</td>
+</tr>
+<tr>
+<td>900</td>
+<td>Male infertility with normal virilization due to developmental or structural testicular defects</td>
+</tr>
+<tr>
+<td>901</td>
+<td>Chromosome Y deletion</td>
+</tr>
+<tr>
+<td>902</td>
+<td>Male sterility due to chromosome Y deletion</td>
+</tr>
+<tr>
+<td>903</td>
+<td>Partial chromosome Y deletion</td>
+</tr>
+<tr>
+<td>904</td>
+<td>Male infertility associated with cryptorchidism</td>
+</tr>
+<tr>
+<td>905</td>
+<td>Male infertility with normal virilisation due to developmental or structural testicular defect associated with cryptorchidism</td>
+</tr>
+<tr>
+<td>906</td>
+<td>Male infertility associated with varicocele</td>
+</tr>
+<tr>
+<td>907</td>
+<td>Male infertility with normal virilisation due to a developmental or structural testicular defect associated with varicocele</td>
+</tr>
+<tr>
+<td>908</td>
+<td>Sertoli cell only syndrome</td>
+</tr>
+<tr>
+<td>909</td>
+<td>Secondary syphilis of skin or mucous membranes</td>
+</tr>
+<tr>
+<td>910</td>
+<td>Mucocutaneous secondary syphilis</td>
+</tr>
+<tr>
+<td>911</td>
+<td>Macular syphilide</td>
+</tr>
+<tr>
+<td>912</td>
+<td>Papular syphilide</td>
+</tr>
+<tr>
+<td>913</td>
+<td>Oral mucosal secondary syphilis</td>
+</tr>
+<tr>
+<td>914</td>
+<td>Secondary syphilis of mouth</td>
+</tr>
+<tr>
+<td>915</td>
+<td>Syphilitic snail-track ulcers</td>
+</tr>
+<tr>
+<td>916</td>
+<td>Syphilitic mucous patches</td>
+</tr>
+<tr>
+<td>917</td>
+<td>Condylomata lata</td>
+</tr>
+<tr>
+<td>918</td>
+<td>Condyloma latum</td>
+</tr>
+<tr>
+<td>919</td>
+<td>Secondary syphilis of anus</td>
+</tr>
+<tr>
+<td>920</td>
+<td>Secondary syphilis of vulva</td>
+</tr>
+<tr>
+<td>921</td>
+<td>Cutaneous complications of secondary syphilis</td>
+</tr>
+<tr>
+<td>922</td>
+<td>Lues maligna</td>
+</tr>
+<tr>
+<td>923</td>
+<td>Syphilitic leukoderma</td>
+</tr>
+<tr>
+<td>924</td>
+<td>Syphilitic alopecia</td>
+</tr>
+<tr>
+<td>925</td>
+<td>Chronic kidney disease, stage 3a</td>
+</tr>
+<tr>
+<td>926</td>
+<td>chronic renal failure, stage 3a</td>
+</tr>
+<tr>
+<td>927</td>
+<td>CKD - [chronic kidney disease] stage 3a</td>
+</tr>
+<tr>
+<td>928</td>
+<td>chronic kidney disease stage 3 NOS</td>
+</tr>
+<tr>
+<td>929</td>
+<td>Other specified problems associated with upbringing</td>
+</tr>
+<tr>
+<td>930</td>
+<td>Lack of learning or play experience</td>
+</tr>
+<tr>
+<td>931</td>
+<td>Problem with a parenting situation</td>
+</tr>
+<tr>
+<td>932</td>
+<td>problem with atypical parenting situation</td>
+</tr>
+<tr>
+<td>933</td>
+<td>Extravasation of urine</td>
+</tr>
+<tr>
+<td>934</td>
+<td>leakage of urine</td>
+</tr>
+<tr>
+<td>935</td>
+<td>Rupture of a renal calyx</td>
+</tr>
+<tr>
+<td>936</td>
+<td>Rupture of a renal fornix</td>
+</tr>
+<tr>
+<td>937</td>
+<td>Fabry disease</td>
+</tr>
+<tr>
+<td>938</td>
+<td>Anderson-Fabry disease</td>
+</tr>
+<tr>
+<td>939</td>
+<td>Ceramide trihexosidase deficiency</td>
+</tr>
+<tr>
+<td>940</td>
+<td>Alpha-galactosidase A deficiency</td>
+</tr>
+<tr>
+<td>941</td>
+<td>Fabry disease X-linked</td>
+</tr>
+<tr>
+<td>942</td>
+<td>autosomal dominant Fabry disease</td>
+</tr>
+<tr>
+<td>943</td>
+<td>autosomal recessive Fabry disease</td>
+</tr>
+<tr>
+<td>944</td>
+<td>Angiokeratoma corporis diffusum</td>
+</tr>
+<tr>
+<td>945</td>
+<td>Lichen sclerosus</td>
+</tr>
+<tr>
+<td>946</td>
+<td>LS et A - [Lichen sclerosus et atrophicus]</td>
+</tr>
+<tr>
+<td>947</td>
+<td>Lichen sclerosus et atrophicus</td>
+</tr>
+<tr>
+<td>948</td>
+<td>Lichen albus</td>
+</tr>
+<tr>
+<td>949</td>
+<td>Structural device failure, as mode of injury or harm</td>
+</tr>
+<tr>
+<td>950</td>
+<td>part failure of a structural device as a mode of injury</td>
+</tr>
+<tr>
+<td>951</td>
+<td>structural device component failure as a mode of injury</td>
+</tr>
+<tr>
+<td>952</td>
+<td>structural device design failure as a mode of injury</td>
+</tr>
+<tr>
+<td>953</td>
+<td>manufacturing fault of a structural device as a mode of injury</td>
+</tr>
+<tr>
+<td>954</td>
+<td>leakage of a device</td>
+</tr>
+<tr>
+<td>955</td>
+<td>defective component as mode of injury</td>
+</tr>
+<tr>
+<td>956</td>
+<td>defective device as mode of injury</td>
+</tr>
+<tr>
+<td>957</td>
+<td>crack in device</td>
+</tr>
+<tr>
+<td>958</td>
+<td>broken device</td>
+</tr>
+<tr>
+<td>959</td>
+<td>chip in device</td>
+</tr>
+<tr>
+<td>960</td>
+<td>Leakage from device, as mode of injury or harm</td>
+</tr>
+<tr>
+<td>961</td>
+<td>Wear, breakage or breakdown of device, as mode of injury or harm</td>
+</tr>
+<tr>
+<td>962</td>
+<td>Breakdown of intraocular lens</td>
+</tr>
+<tr>
+<td>963</td>
+<td>mechanical breakdown of intraocular lens as mode of injury</td>
+</tr>
+<tr>
+<td>964</td>
+<td>Dominant limb-girdle muscular dystrophy</td>
+</tr>
+<tr>
+<td>965</td>
+<td>LGMD1 - [limb-girdle muscular dystrophy] 1</td>
+</tr>
+<tr>
+<td>966</td>
+<td>Limb-girdle muscular dystrophy 1A, myotilin myopathy</td>
+</tr>
+<tr>
+<td>967</td>
+<td>LGMD 1A - [Limb-girdle muscular dystrophy 1A, myotilin myopathy]</td>
+</tr>
+<tr>
+<td>968</td>
+<td>Limb-girdle muscular dystrophy 1B, lamin myopathy</td>
+</tr>
+<tr>
+<td>969</td>
+<td>LGMD 1B - [Limb-girdle muscular dystrophy 1B, lamin myopathy]</td>
+</tr>
+<tr>
+<td>970</td>
+<td>Limb-girdle muscular dystrophy 1C, caveolin myopathy</td>
+</tr>
+<tr>
+<td>971</td>
+<td>LGMD 1C - [Limb-girdle muscular dystrophy 1C, caveolin myopathy]</td>
+</tr>
+<tr>
+<td>972</td>
+<td>Limb-girdle muscular dystrophy 1D, gene mapped to 6q23</td>
+</tr>
+<tr>
+<td>973</td>
+<td>Limb-girdle muscular dystrophy 1E, gene mapped to 7q</td>
+</tr>
+<tr>
+<td>974</td>
+<td>Limb-girdle muscular dystrophy 1F, gene mapped to 7q32.1-32.2</td>
+</tr>
+<tr>
+<td>975</td>
+<td>Limb-girdle muscular dystrophy 1G, gene mapped to 4q21</td>
+</tr>
+<tr>
+<td>976</td>
+<td>Limb-girdle muscular dystrophy 1H, gene mapped to 3p25.1p23</td>
+</tr>
+<tr>
+<td>977</td>
+<td>LGMD1H - [Limb-girdle muscular dystrophy] 1H</td>
+</tr>
+<tr>
+<td>978</td>
+<td>Problem of unspecified body part</td>
+</tr>
+<tr>
+<td>979</td>
+<td>Symptom or complaint of a body part</td>
+</tr>
+<tr>
+<td>980</td>
+<td>Hypersomnia associated with a mental disorder</td>
+</tr>
+<tr>
+<td>981</td>
+<td>hypersomnolence associated with a mental disorder</td>
+</tr>
+<tr>
+<td>982</td>
+<td>Female infertility without specification whether primary or secondary</td>
+</tr>
+<tr>
+<td>983</td>
+<td>Female infertility</td>
+</tr>
+<tr>
+<td>984</td>
+<td>female infertility of unspecified origin</td>
+</tr>
+<tr>
+<td>985</td>
+<td>female sterility NOS</td>
+</tr>
+<tr>
+<td>986</td>
+<td>inability to achieve a pregnancy</td>
+</tr>
+<tr>
+<td>987</td>
+<td>Female infertility associated with ovarian dysfunction</td>
+</tr>
+<tr>
+<td>988</td>
+<td>anovulatory infertility</td>
+</tr>
+<tr>
+<td>989</td>
+<td>female infertility associated with anovulation</td>
+</tr>
+<tr>
+<td>990</td>
+<td>female infertility associated with anovulatory cycle</td>
+</tr>
+<tr>
+<td>991</td>
+<td>female infertility of anovulatory origin</td>
+</tr>
+<tr>
+<td>992</td>
+<td>anovular cycle</td>
+</tr>
+<tr>
+<td>993</td>
+<td>anovulatory</td>
+</tr>
+<tr>
+<td>994</td>
+<td>anovulatory cycle</td>
+</tr>
+<tr>
+<td>995</td>
+<td>anovulatory period</td>
+</tr>
+<tr>
+<td>996</td>
+<td>failure or lack of ovulation</td>
+</tr>
+<tr>
+<td>997</td>
+<td>lack of ovulation</td>
+</tr>
+<tr>
+<td>998</td>
+<td>nonovulation</td>
+</tr>
+<tr>
+<td>999</td>
+<td>Female infertility associated with male factors</td>
+</tr>
+<tr>
+<td>1000</td>
+<td>failure to conceive due to infertility of male partner</td>
+</tr>
+<tr>
+<td>1001</td>
+<td>Female infertility associated with female sexual dysfunction</td>
+</tr>
+<tr>
+<td>1002</td>
+<td>Female infertility associated with male sexual dysfunction</td>
+</tr>
+<tr>
+<td>1003</td>
+<td>Female infertility of cervical origin</td>
+</tr>
+<tr>
+<td>1004</td>
+<td>Female infertility associated with vaginal disease or anomaly</td>
+</tr>
+<tr>
+<td>1005</td>
+<td>Female infertility of genetic origin</td>
+</tr>
+<tr>
+<td>1006</td>
+<td>Unexplained female infertility</td>
+</tr>
+<tr>
+<td>1007</td>
+<td>Hereditary skin peeling</td>
+</tr>
+<tr>
+<td>1008</td>
+<td>Generalised non-inflammatory peeling skin syndrome</td>
+</tr>
+<tr>
+<td>1009</td>
+<td>Peeling skin syndrome, type A</td>
+</tr>
+<tr>
+<td>1010</td>
+<td>Generalised inflammatory peeling skin syndrome</td>
+</tr>
+<tr>
+<td>1011</td>
+<td>Peeling skin syndrome, type B</td>
+</tr>
+<tr>
+<td>1012</td>
+<td>Acral skin peeling syndrome</td>
+</tr>
+<tr>
+<td>1013</td>
+<td>APSS</td>
+</tr>
+<tr>
+<td>1014</td>
+<td>Other specified arthrogryposis syndromes</td>
+</tr>
+<tr>
+<td>1015</td>
+<td>Popliteal pterygium syndrome</td>
+</tr>
+<tr>
+<td>1016</td>
+<td>Popliteal web syndrome</td>
+</tr>
+<tr>
+<td>1017</td>
+<td>Bartsocas-Papas syndrome</td>
+</tr>
+<tr>
+<td>1018</td>
+<td>Autosomal dominant popliteal pterygium syndrome</td>
+</tr>
+<tr>
+<td>1019</td>
+<td>Lethal congenital contracture syndrome</td>
+</tr>
+<tr>
+<td>1020</td>
+<td>Lethal congenital contracture syndrome type 1</td>
+</tr>
+<tr>
+<td>1021</td>
+<td>Lethal congenital contracture syndrome type 2</td>
+</tr>
+<tr>
+<td>1022</td>
+<td>Lethal congenital contracture syndrome type 3</td>
+</tr>
+<tr>
+<td>1023</td>
+<td>Distal arthrogryposis</td>
+</tr>
+<tr>
+<td>1024</td>
+<td>Digitotalar dysmorphism</td>
+</tr>
+<tr>
+<td>1025</td>
+<td>Distal arthrogryposis type 1</td>
+</tr>
+<tr>
+<td>1026</td>
+<td>Freeman-Sheldon syndrome</td>
+</tr>
+<tr>
+<td>1027</td>
+<td>Distal arthrogryposis type 2A</td>
+</tr>
+<tr>
+<td>1028</td>
+<td>Craniocarpotarsal dysplasia</td>
+</tr>
+<tr>
+<td>1029</td>
+<td>Craniocarpotarsal dystrophy</td>
+</tr>
+<tr>
+<td>1030</td>
+<td>Whistling face syndrome</td>
+</tr>
+<tr>
+<td>1031</td>
+<td>Sheldon-Hall syndrome</td>
+</tr>
+<tr>
+<td>1032</td>
+<td>Distal arthrogryposis type 2B</td>
+</tr>
+<tr>
+<td>1033</td>
+<td>Distal arthrogryposis type 3</td>
+</tr>
+<tr>
+<td>1034</td>
+<td>Arthrogryposis - severe scoliosis</td>
+</tr>
+<tr>
+<td>1035</td>
+<td>Distal arthrogryposis type 4</td>
+</tr>
+<tr>
+<td>1036</td>
+<td>Arthrogryposis - ophthalmoplegia - retinopathy</td>
+</tr>
+<tr>
+<td>1037</td>
+<td>Distal arthrogryposis type 5</td>
+</tr>
+<tr>
+<td>1038</td>
+<td>Arthrogryposis-like hand anomaly - sensorineural deafness</td>
+</tr>
+<tr>
+<td>1039</td>
+<td>Distal arthrogryposis type 6</td>
+</tr>
+<tr>
+<td>1040</td>
+<td>Trismus - pseudocamptodactyly</td>
+</tr>
+<tr>
+<td>1041</td>
+<td>Distal arthrogryposis type 7</td>
+</tr>
+<tr>
+<td>1042</td>
+<td>Hecht syndrome</td>
+</tr>
+<tr>
+<td>1043</td>
+<td>Acute monoblastic or monocytic leukaemia</td>
+</tr>
+<tr>
+<td>1044</td>
+<td>FAB M5</td>
+</tr>
+<tr>
+<td>1045</td>
+<td>acute monocytic leukaemia</td>
+</tr>
+<tr>
+<td>1046</td>
+<td>acute monocytic/monoblastic leukaemia</td>
+</tr>
+<tr>
+<td>1047</td>
+<td>acute monoblastic/monocytic leukaemia without mention of remission</td>
+</tr>
+<tr>
+<td>1048</td>
+<td>acute monocytoid leukaemia</td>
+</tr>
+<tr>
+<td>1049</td>
+<td>monoblastic leukaemia</td>
+</tr>
+<tr>
+<td>1050</td>
+<td>FAB type M5a</td>
+</tr>
+<tr>
+<td>1051</td>
+<td>French-American-British (FAB) type M5a</td>
+</tr>
+<tr>
+<td>1052</td>
+<td>Acute monoblastic or monocytic leukaemia in complete remission</td>
+</tr>
+<tr>
+<td>1053</td>
+<td>AML M5a</td>
+</tr>
+<tr>
+<td>1054</td>
+<td>AML M5b</td>
+</tr>
+<tr>
+<td>1055</td>
+<td>Acute hepatitis A</td>
+</tr>
+<tr>
+<td>1056</td>
+<td>Acute hepatitis A virus infection</td>
+</tr>
+<tr>
+<td>1057</td>
+<td>Hyperprolactinaemia</td>
+</tr>
+<tr>
+<td>1058</td>
+<td>Drug-induced hyperprolactinaemia</td>
+</tr>
+<tr>
+<td>1059</td>
+<td>Hypothyroidism-associated hyperprolactinemia</td>
+</tr>
+<tr>
+<td>1060</td>
+<td>Functional hyperprolactinoma</td>
+</tr>
+<tr>
+<td>1061</td>
+<td>Chiari-Frommel Syndrome</td>
+</tr>
+<tr>
+<td>1062</td>
+<td>Argonz-del Castillo Syndrome</td>
+</tr>
+<tr>
+<td>1063</td>
+<td>Ahumada-Del Castillo syndrome</td>
+</tr>
+<tr>
+<td>1064</td>
+<td>amenorrhoea-galactorrhoea syndrome</td>
+</tr>
+<tr>
+<td>1065</td>
+<td>non-pregnancy related a-g syndrome</td>
+</tr>
+<tr>
+<td>1066</td>
+<td>Hyperprolactinemia caused by other hypothalamo-pituitary disorders</td>
+</tr>
+<tr>
+<td>1067</td>
+<td>Macroprolactinaemia</td>
+</tr>
+<tr>
+<td>1068</td>
+<td>Waardenburg-Shah syndrome</td>
+</tr>
+<tr>
+<td>1069</td>
+<td>Waardenburg syndrome type 4A</td>
+</tr>
+<tr>
+<td>1070</td>
+<td>Hirschsprung disease with pigmentary anomaly</td>
+</tr>
+<tr>
+<td>1071</td>
+<td>Waardenburg-Shah syndrome, neurologic variant</td>
+</tr>
+<tr>
+<td>1072</td>
+<td>Vertical gaze palsy</td>
+</tr>
+<tr>
+<td>1073</td>
+<td>Paralysis of downgaze</td>
+</tr>
+<tr>
+<td>1074</td>
+<td>Paralysis of upgaze</td>
+</tr>
+<tr>
+<td>1075</td>
+<td>Paralysis of combined upgaze and downgaze</td>
+</tr>
+<tr>
+<td>1076</td>
+<td>Vertical one-and-a-half syndrome</td>
+</tr>
+<tr>
+<td>1077</td>
+<td>Dorsal midbrain syndrome</td>
+</tr>
+<tr>
+<td>1078</td>
+<td>Parinaud’s syndrome</td>
+</tr>
+<tr>
+<td>1079</td>
+<td>pretectal syndrome</td>
+</tr>
+<tr>
+<td>1080</td>
+<td>Sylvian aqueduct syndrome</td>
+</tr>
+<tr>
+<td>1081</td>
+<td>Koerber-Salus-Elschnig syndrome</td>
+</tr>
+<tr>
+<td>1082</td>
+<td>Other specified sphingolipidosis</td>
+</tr>
+<tr>
+<td>1083</td>
+<td>Mucolipidosis type 4</td>
+</tr>
+<tr>
+<td>1084</td>
+<td>Sialolipidosis</td>
+</tr>
+<tr>
+<td>1085</td>
+<td>Gaucher disease</td>
+</tr>
+<tr>
+<td>1086</td>
+<td>Acid beta-glucosidase deficiency</td>
+</tr>
+<tr>
+<td>1087</td>
+<td>Glucocerebrosidase deficiency</td>
+</tr>
+<tr>
+<td>1088</td>
+<td>Glucosylceramide beta-glucosidase deficiency</td>
+</tr>
+<tr>
+<td>1089</td>
+<td>Glucocerebrosidosis</td>
+</tr>
+<tr>
+<td>1090</td>
+<td>Cerebroside lipidosis syndrome</td>
+</tr>
+<tr>
+<td>1091</td>
+<td>Gaucher disease type 1</td>
+</tr>
+<tr>
+<td>1092</td>
+<td>Noncerebral juvenile Gaucher disease</td>
+</tr>
+<tr>
+<td>1093</td>
+<td>Adult Gaucher disease</td>
+</tr>
+<tr>
+<td>1094</td>
+<td>Gaucher disease type 2</td>
+</tr>
+<tr>
+<td>1095</td>
+<td>Acute neuronopathic Gaucher disease</td>
+</tr>
+<tr>
+<td>1096</td>
+<td>Infantile cerebral Gaucher disease</td>
+</tr>
+<tr>
+<td>1097</td>
+<td>Infantile Gaucher disease</td>
+</tr>
+<tr>
+<td>1098</td>
+<td>Cerebral acute Gaucher disease</td>
+</tr>
+<tr>
+<td>1099</td>
+<td>Gaucher disease type 3</td>
+</tr>
+<tr>
+<td>1100</td>
+<td>Cerebral juvenile and adult form of Gaucher disease</td>
+</tr>
+<tr>
+<td>1101</td>
+<td>Chronic neuronopathic Gaucher disease</td>
+</tr>
+<tr>
+<td>1102</td>
+<td>Subacute neuronopathic Gaucher disease</td>
+</tr>
+<tr>
+<td>1103</td>
+<td>Juvenile Gaucher disease</td>
+</tr>
+<tr>
+<td>1104</td>
+<td>Norrbotnian Gaucher disease</td>
+</tr>
+<tr>
+<td>1105</td>
+<td>Gaucher disease - ophthalmoplegia - cardiovascular calcification</td>
+</tr>
+<tr>
+<td>1106</td>
+<td>Cardiovascular Gaucher disease</td>
+</tr>
+<tr>
+<td>1107</td>
+<td>Gaucher disease type 3C</td>
+</tr>
+<tr>
+<td>1108</td>
+<td>Gaucher-like disease</td>
+</tr>
+<tr>
+<td>1109</td>
+<td>Perinatal-lethal Gaucher disease</td>
+</tr>
+<tr>
+<td>1110</td>
+<td>Fetal Gaucher disease</td>
+</tr>
+<tr>
+<td>1111</td>
+<td>Collodion type Gaucher disease</td>
+</tr>
+<tr>
+<td>1112</td>
+<td>Atypical Gaucher disease due to saposin C deficiency</td>
+</tr>
+<tr>
+<td>1113</td>
+<td>Gaucher’s splenomegaly</td>
+</tr>
+<tr>
+<td>1114</td>
+<td>Mucosulfatidosis</td>
+</tr>
+<tr>
+<td>1115</td>
+<td>Multiple sulfatase deficiency</td>
+</tr>
+<tr>
+<td>1116</td>
+<td>Juvenile sulfatidose, Austin type</td>
+</tr>
+<tr>
+<td>1117</td>
+<td>Austin disease</td>
+</tr>
+<tr>
+<td>1118</td>
+<td>Niemann-Pick disease</td>
+</tr>
+<tr>
+<td>1119</td>
+<td>Sphingomyelinase deficiency</td>
+</tr>
+<tr>
+<td>1120</td>
+<td>Niemann-Pick disease type A</td>
+</tr>
+<tr>
+<td>1121</td>
+<td>Niemann-Pick disease type B</td>
+</tr>
+<tr>
+<td>1122</td>
+<td>Niemann-Pick disease type C</td>
+</tr>
+<tr>
+<td>1123</td>
+<td>cholesterol transporter deficiency</td>
+</tr>
+<tr>
+<td>1124</td>
+<td>Niemann-Pick disease type C, severe perinatal</td>
+</tr>
+<tr>
+<td>1125</td>
+<td>Niemann-Pick disease type C, severe early infantile neurologic onset</td>
+</tr>
+<tr>
+<td>1126</td>
+<td>Niemann-Pick disease type C, late infantile neurologic onset</td>
+</tr>
+<tr>
+<td>1127</td>
+<td>Niemann-Pick disease type C, juvenile neurologic onset</td>
+</tr>
+<tr>
+<td>1128</td>
+<td>Niemann-Pick disease type C, classic form</td>
+</tr>
+<tr>
+<td>1129</td>
+<td>Niemann-Pick disease type C, adult neurologic onset</td>
+</tr>
+<tr>
+<td>1130</td>
+<td>Farber disease</td>
+</tr>
+<tr>
+<td>1131</td>
+<td>Farber lipogranulomatosis</td>
+</tr>
+<tr>
+<td>1132</td>
+<td>Ceramidase deficiency</td>
+</tr>
+<tr>
+<td>1133</td>
+<td>Disseminated lipogranulomatosis</td>
+</tr>
+<tr>
+<td>1134</td>
+<td>Lysosomal acid lipase deficiency</td>
+</tr>
+<tr>
+<td>1135</td>
+<td>Acid esterase deficiency</td>
+</tr>
+<tr>
+<td>1136</td>
+<td>Wolman disease</td>
+</tr>
+<tr>
+<td>1137</td>
+<td>Cholesteryl ester storage disease</td>
+</tr>
+<tr>
+<td>1138</td>
+<td>CESD - [Cholesteryl ester storage disease]</td>
+</tr>
+<tr>
+<td>1139</td>
+<td>Encephalopathy due to prosaposin deficiency</td>
+</tr>
+<tr>
+<td>1140</td>
+<td>Combined prosaposin deficiency</td>
+</tr>
+<tr>
+<td>1141</td>
+<td>Congenital anomaly of a ventricle or the ventricular septum, unspecified</td>
+</tr>
+<tr>
+<td>1142</td>
+<td>Congenital anomaly of a ventricle or the ventricular septum</td>
+</tr>
+<tr>
+<td>1143</td>
+<td>Intestinal infections due to Shigella</td>
+</tr>
+<tr>
+<td>1144</td>
+<td>shigellosis</td>
+</tr>
+<tr>
+<td>1145</td>
+<td>bacillary dysentery NOS</td>
+</tr>
+<tr>
+<td>1146</td>
+<td>bacillary colitis</td>
+</tr>
+<tr>
+<td>1147</td>
+<td>shigella enteritis</td>
+</tr>
+<tr>
+<td>1148</td>
+<td>Shigellosis due to Shigella dysenteriae</td>
+</tr>
+<tr>
+<td>1149</td>
+<td>bacillary dysentery due to shigella dysenteriae</td>
+</tr>
+<tr>
+<td>1150</td>
+<td>bacillary dysentery due to shigella group A</td>
+</tr>
+<tr>
+<td>1151</td>
+<td>infection due to shigella dysenteriae</td>
+</tr>
+<tr>
+<td>1152</td>
+<td>infection due to shigella group A</td>
+</tr>
+<tr>
+<td>1153</td>
+<td>Shiga-Kruse dysentery</td>
+</tr>
+<tr>
+<td>1154</td>
+<td>shiga dysentery</td>
+</tr>
+<tr>
+<td>1155</td>
+<td>infection due to shigella schmitzii</td>
+</tr>
+<tr>
+<td>1156</td>
+<td>infection due to bacillus shiga-kruse</td>
+</tr>
+<tr>
+<td>1157</td>
+<td>dysentery due to bacillus shiga-kruse</td>
+</tr>
+<tr>
+<td>1158</td>
+<td>infection due to bacillus shiga</td>
+</tr>
+<tr>
+<td>1159</td>
+<td>dysentery due to bacillus schmitz</td>
+</tr>
+<tr>
+<td>1160</td>
+<td>dysentery due to bacillus schmitz-stutzer</td>
+</tr>
+<tr>
+<td>1161</td>
+<td>dysentery due to bacillus shiga</td>
+</tr>
+<tr>
+<td>1162</td>
+<td>Group A shigellosis</td>
+</tr>
+<tr>
+<td>1163</td>
+<td>Schmitz dysentery</td>
+</tr>
+<tr>
+<td>1164</td>
+<td>Enteritis in shigellosis due to Shigella dysenteriae</td>
+</tr>
+<tr>
+<td>1165</td>
+<td>Enteritis in Shigellosis due to Shiga-Kruse dysentery</td>
+</tr>
+<tr>
+<td>1166</td>
+<td>Enteritis in Shigellosis due to Group A shigellosis</td>
+</tr>
+<tr>
+<td>1167</td>
+<td>Colitis in shigellosis due to Shigella dysenteriae</td>
+</tr>
+<tr>
+<td>1168</td>
+<td>Shigellosis due to Shigella flexneri</td>
+</tr>
+<tr>
+<td>1169</td>
+<td>dysentery due to bacillus flexneri</td>
+</tr>
+<tr>
+<td>1170</td>
+<td>infection due to group B shigella</td>
+</tr>
+<tr>
+<td>1171</td>
+<td>bacillary dysentery due to shigella flexneri</td>
+</tr>
+<tr>
+<td>1172</td>
+<td>bacillary dysentery due to shigella group B</td>
+</tr>
+<tr>
+<td>1173</td>
+<td>bacillus flexner infection (deprecated)</td>
+</tr>
+<tr>
+<td>1174</td>
+<td>shigella flexneri infection</td>
+</tr>
+<tr>
+<td>1175</td>
+<td>Hiss-Russell dysentery</td>
+</tr>
+<tr>
+<td>1176</td>
+<td>Group B shigellosis</td>
+</tr>
+<tr>
+<td>1177</td>
+<td>Flexner dysentery</td>
+</tr>
+<tr>
+<td>1178</td>
+<td>Enteritis in shigellosis due to Shigella flexneri</td>
+</tr>
+<tr>
+<td>1179</td>
+<td>Group B shigellosis resulting in enteritis</td>
+</tr>
+<tr>
+<td>1180</td>
+<td>Colitis in shigellosis due to Shigella flexneri</td>
+</tr>
+<tr>
+<td>1181</td>
+<td>Shigellosis due to Shigella boydii</td>
+</tr>
+<tr>
+<td>1182</td>
+<td>infection due to group C shigella</td>
+</tr>
+<tr>
+<td>1183</td>
+<td>infection due to shigella boydii</td>
+</tr>
+<tr>
+<td>1184</td>
+<td>bacillary dysentery due to shigella boydii</td>
+</tr>
+<tr>
+<td>1185</td>
+<td>bacillary dysentery due to shigella group C</td>
+</tr>
+<tr>
+<td>1186</td>
+<td>Boyd dysentery</td>
+</tr>
+<tr>
+<td>1187</td>
+<td>Group C shigellosis</td>
+</tr>
+<tr>
+<td>1188</td>
+<td>Enteritis in shigellosis due to Shigella boydii</td>
+</tr>
+<tr>
+<td>1189</td>
+<td>Group C shigellosis resulting in enteritis</td>
+</tr>
+<tr>
+<td>1190</td>
+<td>Colitis in shigellosis due to Shigella boydii</td>
+</tr>
+<tr>
+<td>1191</td>
+<td>Shigellosis due to Shigella sonnei</td>
+</tr>
+<tr>
+<td>1192</td>
+<td>bacillary dysentery due to shigella sonnei</td>
+</tr>
+<tr>
+<td>1193</td>
+<td>bacillary dysentery due to shigella group D</td>
+</tr>
+<tr>
+<td>1194</td>
+<td>infection due to group D shigella</td>
+</tr>
+<tr>
+<td>1195</td>
+<td>infection due to shigella sonnei</td>
+</tr>
+<tr>
+<td>1196</td>
+<td>Group D shigellosis</td>
+</tr>
+<tr>
+<td>1197</td>
+<td>Sonne dysentery</td>
+</tr>
+<tr>
+<td>1198</td>
+<td>Enteritis in shigellosis due to Shigella sonnei</td>
+</tr>
+<tr>
+<td>1199</td>
+<td>Group D shigellosis resulting in enteritis</td>
+</tr>
+<tr>
+<td>1200</td>
+<td>Colitis in shigellosis due to Shigella sonnei</td>
+</tr>
+<tr>
+<td>1201</td>
+<td>Bacterial colitis due to Shigella</td>
+</tr>
+<tr>
+<td>1202</td>
+<td>Bacterial enteritis due to Shigella</td>
+</tr>
+<tr>
+<td>1203</td>
+<td>Sepsis due to shigella without mention of septic shock</td>
+</tr>
+<tr>
+<td>1204</td>
+<td>Sepsis due to shigella NOS</td>
+</tr>
+<tr>
+<td>1205</td>
+<td>Syndromes with lissencephaly as a major feature</td>
+</tr>
+<tr>
+<td>1206</td>
+<td>Pachygyria</td>
+</tr>
+<tr>
+<td>1207</td>
+<td>Agyria</td>
+</tr>
+<tr>
+<td>1208</td>
+<td>Classic lissencephaly</td>
+</tr>
+<tr>
+<td>1209</td>
+<td>Lissencephaly type 1</td>
+</tr>
+<tr>
+<td>1210</td>
+<td>Lissencephaly type 1 due to doublecortin gene mutation</td>
+</tr>
+<tr>
+<td>1211</td>
+<td>Subcortical band heterotopia</td>
+</tr>
+<tr>
+<td>1212</td>
+<td>Miller-Dieker syndrome</td>
+</tr>
+<tr>
+<td>1213</td>
+<td>Lissencephaly due to 17p13.3 deletion</td>
+</tr>
+<tr>
+<td>1214</td>
+<td>17p13.3 microdeletion syndrome</td>
+</tr>
+<tr>
+<td>1215</td>
+<td>Telomeric deletion 17p</td>
+</tr>
+<tr>
+<td>1216</td>
+<td>Monosomy 17p13.3</td>
+</tr>
+<tr>
+<td>1217</td>
+<td>17p13.3 deletion</td>
+</tr>
+<tr>
+<td>1218</td>
+<td>Lissencephaly type 1 due to LIS1 gene mutation</td>
+</tr>
+<tr>
+<td>1219</td>
+<td>Isolated lissencephaly type 1 without known genetic defects</td>
+</tr>
+<tr>
+<td>1220</td>
+<td>Lissencephaly type 2</td>
+</tr>
+<tr>
+<td>1221</td>
+<td>Lissencephaly type 3</td>
+</tr>
+<tr>
+<td>1222</td>
+<td>Neu-Laxova syndrome</td>
+</tr>
+<tr>
+<td>1223</td>
+<td>Lissencephaly type 3 - familial fetal akinesia sequence</td>
+</tr>
+<tr>
+<td>1224</td>
+<td>Lissencephaly type 3 - metacarpal bone dysplasia</td>
+</tr>
+<tr>
+<td>1225</td>
+<td>Lissencephaly with cerebellar hypoplasia</td>
+</tr>
+<tr>
+<td>1226</td>
+<td>Lissencephaly with cerebellar hypoplasia type A</td>
+</tr>
+<tr>
+<td>1227</td>
+<td>Lissencephaly with cerebellar hypoplasia type B</td>
+</tr>
+<tr>
+<td>1228</td>
+<td>Lissencephaly with cerebellar hypoplasia type C</td>
+</tr>
+<tr>
+<td>1229</td>
+<td>Lissencephaly with cerebellar hypoplasia type D</td>
+</tr>
+<tr>
+<td>1230</td>
+<td>Lissencephaly with cerebellar hypoplasia type E</td>
+</tr>
+<tr>
+<td>1231</td>
+<td>Lissencephaly with cerebellar hypoplasia type F</td>
+</tr>
+<tr>
+<td>1232</td>
+<td>Microlissencephaly</td>
+</tr>
+<tr>
+<td>1233</td>
+<td>Microlissencephaly type A</td>
+</tr>
+<tr>
+<td>1234</td>
+<td>Lissencephaly syndrome, Norman-Roberts type</td>
+</tr>
+<tr>
+<td>1235</td>
+<td>Microlissencephaly type B</td>
+</tr>
+<tr>
+<td>1236</td>
+<td>Lissencephaly due to TUBA1A gene mutation</td>
+</tr>
+<tr>
+<td>1237</td>
+<td>X-linked lissencephaly - agenesis of corpus callosum - genital anomalies</td>
+</tr>
+<tr>
+<td>1238</td>
+<td>Craniotelencephalic dysplasia</td>
+</tr>
+<tr>
+<td>1239</td>
+<td>Micro syndrome</td>
+</tr>
+<tr>
+<td>1240</td>
+<td>Warburg Micro syndrome</td>
+</tr>
+<tr>
+<td>1241</td>
+<td>WARBM1 - [Warburg Micro syndrome]</td>
+</tr>
+<tr>
+<td>1242</td>
+<td>Iris coloboma with ptosis - intellectual deficit</td>
+</tr>
+<tr>
+<td>1243</td>
+<td>Harmful effects of drugs, medicaments or biological substances, not elsewhere classified</td>
+</tr>
+<tr>
+<td>1244</td>
+<td>drugs, medicaments or biological substances, toxicity not elsewhere classified</td>
+</tr>
+<tr>
+<td>1245</td>
+<td>adverse drug effects</td>
+</tr>
+<tr>
+<td>1246</td>
+<td>drug reaction NOS</td>
+</tr>
+<tr>
+<td>1247</td>
+<td>drug allergy NOS</td>
+</tr>
+<tr>
+<td>1248</td>
+<td>drug toxicity NOS</td>
+</tr>
+<tr>
+<td>1249</td>
+<td>drug ingestion NOS</td>
+</tr>
+<tr>
+<td>1250</td>
+<td>toxic effects of drugs NOS</td>
+</tr>
+<tr>
+<td>1251</td>
+<td>acute drug intoxication</td>
+</tr>
+<tr>
+<td>1252</td>
+<td>toxic use of drugs</td>
+</tr>
+<tr>
+<td>1253</td>
+<td>intake of a toxic substance</td>
+</tr>
+<tr>
+<td>1254</td>
+<td>Harmful effects of opioids or related analgesics</td>
+</tr>
+<tr>
+<td>1255</td>
+<td>Harmful effects of opium</td>
+</tr>
+<tr>
+<td>1256</td>
+<td>Harmful effects of morphine</td>
+</tr>
+<tr>
+<td>1257</td>
+<td>Harmful effects of oxycodone</td>
+</tr>
+<tr>
+<td>1258</td>
+<td>oxycodone toxicity</td>
+</tr>
+<tr>
+<td>1259</td>
+<td>Harmful effects of codeine</td>
+</tr>
+<tr>
+<td>1260</td>
+<td>Harmful effects of heroin</td>
+</tr>
+<tr>
+<td>1261</td>
+<td>poisoning by diacetylmorphine</td>
+</tr>
+<tr>
+<td>1262</td>
+<td>poisoning by heroin</td>
+</tr>
+<tr>
+<td>1263</td>
+<td>poisoning by heroin NOS</td>
+</tr>
+<tr>
+<td>1264</td>
+<td>acute heroin intoxication</td>
+</tr>
+<tr>
+<td>1265</td>
+<td>acute heroin toxicity</td>
+</tr>
+<tr>
+<td>1266</td>
+<td>toxic effects of heroin</td>
+</tr>
+<tr>
+<td>1267</td>
+<td>Harmful effects of methadone</td>
+</tr>
+<tr>
+<td>1268</td>
+<td>poisoning by methadone</td>
+</tr>
+<tr>
+<td>1269</td>
+<td>poisoning by methadone NOS</td>
+</tr>
+<tr>
+<td>1270</td>
+<td>methadone toxicity</td>
+</tr>
+<tr>
+<td>1271</td>
+<td>Harmful effects of pethidine</td>
+</tr>
+<tr>
+<td>1272</td>
+<td>pethidine poisoning</td>
+</tr>
+<tr>
+<td>1273</td>
+<td>Harmful effects of fentanyl</td>
+</tr>
+<tr>
+<td>1274</td>
+<td>fentanyl poisoning</td>
+</tr>
+<tr>
+<td>1275</td>
+<td>fentanyl toxicity</td>
+</tr>
+<tr>
+<td>1276</td>
+<td>toxic effects of fentanyl</td>
+</tr>
+<tr>
+<td>1277</td>
+<td>fentanyl toxication</td>
+</tr>
+<tr>
+<td>1278</td>
+<td>Harmful effects of phenoperidine</td>
+</tr>
+<tr>
+<td>1279</td>
+<td>phenoperidine poisoning</td>
+</tr>
+<tr>
+<td>1280</td>
+<td>Fentanyl and heroin toxicity</td>
+</tr>
+<tr>
+<td>1281</td>
+<td>Harmful effects of sedative hypnotic drugs or other CNS depressants</td>
+</tr>
+<tr>
+<td>1282</td>
+<td>Harmful effects of sedative-hypnotic drugs</td>
+</tr>
+<tr>
+<td>1283</td>
+<td>hypnotic poisoning</td>
+</tr>
+<tr>
+<td>1284</td>
+<td>sleeping draught NOS poisoning</td>
+</tr>
+<tr>
+<td>1285</td>
+<td>sleeping drug NOS poisoning</td>
+</tr>
+<tr>
+<td>1286</td>
+<td>sleeping tablet NOS poisoning</td>
+</tr>
+<tr>
+<td>1287</td>
+<td>Harmful effects of barbiturates</td>
+</tr>
+<tr>
+<td>1288</td>
+<td>Harmful effects of benzodiazepines</td>
+</tr>
+<tr>
+<td>1289</td>
+<td>Harmful effects of chlordiazepoxide</td>
+</tr>
+<tr>
+<td>1290</td>
+<td>chlordiazepoxide poisoning</td>
+</tr>
+<tr>
+<td>1291</td>
+<td>Harmful effects of clozapine</td>
+</tr>
+<tr>
+<td>1292</td>
+<td>clozapine poisoning</td>
+</tr>
+<tr>
+<td>1293</td>
+<td>Harmful effects of cloral derivatives</td>
+</tr>
+<tr>
+<td>1294</td>
+<td>Harmful effects of paraldehyde</td>
+</tr>
+<tr>
+<td>1295</td>
+<td>Harmful effects of bromine compounds</td>
+</tr>
+<tr>
+<td>1296</td>
+<td>Harmful effects of mixed sedatives or hypnotics, not elsewhere classified</td>
+</tr>
+<tr>
+<td>1297</td>
+<td>Harmful effects of anaesthetics or therapeutic gases</td>
+</tr>
+<tr>
+<td>1298</td>
+<td>Harmful effects of anaesthetics or therapeutic gases, nitrous oxide</td>
+</tr>
+<tr>
+<td>1299</td>
+<td>Harmful effects of anaesthetics or therapeutic gases, other inhaled anaesthetics</td>
+</tr>
+<tr>
+<td>1300</td>
+<td>Harmful effects of anaesthetics or therapeutic gases, intravenous anaesthetics</td>
+</tr>
+<tr>
+<td>1301</td>
+<td>Harmful effects of anaesthetics or therapeutic gases, unspecified general anaesthetics</td>
+</tr>
+<tr>
+<td>1302</td>
+<td>Harmful effects of anaesthetics or therapeutic gases, gamma hydroxybutyrate</td>
+</tr>
+<tr>
+<td>1303</td>
+<td>Harmful effects of anaesthetics or therapeutic gases, ketamine</td>
+</tr>
+<tr>
+<td>1304</td>
+<td>ketamine poisoning</td>
+</tr>
+<tr>
+<td>1305</td>
+<td>Harmful effects of anaesthetics or therapeutic gases, other specified general anaesthetic</td>
+</tr>
+<tr>
+<td>1306</td>
+<td>Harmful effects of anaesthetics or therapeutic gases, local anaesthetics</td>
+</tr>
+<tr>
+<td>1307</td>
+<td>Harmful effects of cinchocaine</td>
+</tr>
+<tr>
+<td>1308</td>
+<td>cinchocaine poisoning</td>
+</tr>
+<tr>
+<td>1309</td>
+<td>Harmful effects of oxybuprocaine</td>
+</tr>
+<tr>
+<td>1310</td>
+<td>oxybuprocaine poisoning</td>
+</tr>
+<tr>
+<td>1311</td>
+<td>Harmful effects of psychostimulants</td>
+</tr>
+<tr>
+<td>1312</td>
+<td>Harmful effects of substances, Drugs, medicaments or biological substances, Psychostimulants, Central nervous system stimulants, not elsewhere classified</td>
+</tr>
+<tr>
+<td>1313</td>
+<td>Harmful effects of substances, Drugs, medicaments or biological substances, Psychostimulants, Analeptics</td>
+</tr>
+<tr>
+<td>1314</td>
+<td>Harmful effects of substances, Drugs, medicaments or biological substances, Psychostimulants, Opioid receptor antagonists</td>
+</tr>
+<tr>
+<td>1315</td>
+<td>Harmful effects of substances, Drugs, medicaments or biological substances, Psychostimulants, Caffeine</td>
+</tr>
+<tr>
+<td>1316</td>
+<td>Harmful effects of substances, Drugs, medicaments or biological substances, Psychostimulants, Amphetamine</td>
+</tr>
+<tr>
+<td>1317</td>
+<td>Harmful effects of substances, Drugs, medicaments or biological substances, Psychostimulants, Methylamphetamine</td>
+</tr>
+<tr>
+<td>1318</td>
+<td>Harmful effects of substances, Drugs, medicaments or biological substances, Psychostimulants, Methylenedioxy methamphetamine</td>
+</tr>
+<tr>
+<td>1319</td>
+<td>methamphetamine toxicity</td>
+</tr>
+<tr>
+<td>1320</td>
+<td>Harmful effects of substances, Drugs, medicaments or biological substances, Psychostimulants, Other specified amphetamines</td>
+</tr>
+<tr>
+<td>1321</td>
+<td>Harmful effects of substances, Drugs, medicaments or biological substances, Psychostimulants, Cocaine</td>
+</tr>
+<tr>
+<td>1322</td>
+<td>poisoning by cocaine NOS</td>
+</tr>
+<tr>
+<td>1323</td>
+<td>cocaine toxicity</td>
+</tr>
+<tr>
+<td>1324</td>
+<td>acute cocaine toxicity</td>
+</tr>
+<tr>
+<td>1325</td>
+<td>toxic effects of cocaine</td>
+</tr>
+<tr>
+<td>1326</td>
+<td>Harmful effects of substances, Drugs, medicaments or biological substances, Psychostimulants, Methylphenidate</td>
+</tr>
+<tr>
+<td>1327</td>
+<td>Harmful effects of substances, Drugs, medicaments or biological substances, Psychostimulants, Cathinone</td>
+</tr>
+<tr>
+<td>1328</td>
+<td>Harmful effects of substances, Drugs, medicaments or biological substances, Psychostimulants, Cathinone derivatives</td>
+</tr>
+<tr>
+<td>1329</td>
+<td>Harmful effects of Cannabinoids or hallucinogens</td>
+</tr>
+<tr>
+<td>1330</td>
+<td>Harmful effects of Cannabis</td>
+</tr>
+<tr>
+<td>1331</td>
+<td>cannabis poisoning</td>
+</tr>
+<tr>
+<td>1332</td>
+<td>poisoning by cannabis derivative</td>
+</tr>
+<tr>
+<td>1333</td>
+<td>poisoning by marijuana</td>
+</tr>
+<tr>
+<td>1334</td>
+<td>poisoning by marijuana derivative</td>
+</tr>
+<tr>
+<td>1335</td>
+<td>Harmful effects of synthetic cannabinoids</td>
+</tr>
+<tr>
+<td>1336</td>
+<td>Harmful effects of Lysergide</td>
+</tr>
+<tr>
+<td>1337</td>
+<td>Harmful effects of unspecified psychodysleptics</td>
+</tr>
+<tr>
+<td>1338</td>
+<td>harmful effect of unspecified hallucinogens</td>
+</tr>
+<tr>
+<td>1339</td>
+<td>Harmful effects of other psychodysleptics</td>
+</tr>
+<tr>
+<td>1340</td>
+<td>Other hallucinogens</td>
+</tr>
+<tr>
+<td>1341</td>
+<td>Harmful effects of analgesics, antipyretics or anti-inflammatory drugs</td>
+</tr>
+<tr>
+<td>1342</td>
+<td>Harmful effects of substances, Drugs, medicaments or biological substances, analgesics, antipyretics or anti-inflammatory drugs, Aspirin</td>
+</tr>
+<tr>
+<td>1343</td>
+<td>aspirin poisoning</td>
+</tr>
+<tr>
+<td>1344</td>
+<td>Harmful effects of other salicylates</td>
+</tr>
+<tr>
+<td>1345</td>
+<td>Harmful effects of substances, Drugs, medicaments or biological substances, analgesics, antipyretics or anti-inflammatory drugs, Paracetamol</td>
+</tr>
+<tr>
+<td>1346</td>
+<td>paracetamol poisoning</td>
+</tr>
+<tr>
+<td>1347</td>
+<td>Harmful effects of 4-Aminophenol derivatives</td>
+</tr>
+<tr>
+<td>1348</td>
+<td>Harmful effects of Pyrazolone derivatives</td>
+</tr>
+<tr>
+<td>1349</td>
+<td>Harmful effects of substances, Drugs, medicaments or biological substances, analgesics, antipyretics or anti-inflammatory drugs, Ibuprofen</td>
+</tr>
+<tr>
+<td>1350</td>
+<td>ibuprofen poisoning</td>
+</tr>
+<tr>
+<td>1351</td>
+<td>Harmful effects of other propionic acid derivatives</td>
+</tr>
+<tr>
+<td>1352</td>
+<td>Harmful effects of Indomethacin</td>
+</tr>
+<tr>
+<td>1353</td>
+<td>indometacin poisoning</td>
+</tr>
+<tr>
+<td>1354</td>
+<td>indomethacin poisoning</td>
+</tr>
+<tr>
+<td>1355</td>
+<td>Harmful effects of other nonsteroidal anti-inflammatory drugs</td>
+</tr>
+<tr>
+<td>1356</td>
+<td>poisoning by NSAID - [nonsteroidal anti-inflammatory drugs]</td>
+</tr>
+<tr>
+<td>1357</td>
+<td>Harmful effects of etodolac</td>
+</tr>
+<tr>
+<td>1358</td>
+<td>etodolac poisoning</td>
+</tr>
+<tr>
+<td>1359</td>
+<td>Harmful effects of antirheumatics, not elsewhere classified</td>
+</tr>
+<tr>
+<td>1360</td>
+<td>Harmful effects of antidepressants</td>
+</tr>
+<tr>
+<td>1361</td>
+<td>Harmful effects of substances, Drugs, medicaments or biological substances, Antidepressants, Tricyclic antidepressants</td>
+</tr>
+<tr>
+<td>1362</td>
+<td>Harmful effects of substances, Drugs, medicaments or biological substances, Antidepressants, Tetracyclic antidepressants</td>
+</tr>
+<tr>
+<td>1363</td>
+<td>Harmful effects of substances, Drugs, medicaments or biological substances, Antidepressants, Monoamine-oxidase-inhibitor antidepressants</td>
+</tr>
+<tr>
+<td>1364</td>
+<td>Harmful effects of substances, Drugs, medicaments or biological substances, Antidepressants, Selective serotonin or norepinephrine reuptake inhibitors</td>
+</tr>
+<tr>
+<td>1365</td>
+<td>Harmful effects of substances, Drugs, medicaments or biological substances, Antidepressants, Selective serotonin reuptake inhibitors</td>
+</tr>
+<tr>
+<td>1366</td>
+<td>Harmful effects of antipsychotics</td>
+</tr>
+<tr>
+<td>1367</td>
+<td>Harmful effects of phenothiazine antipsychotics or neuroleptics</td>
+</tr>
+<tr>
+<td>1368</td>
+<td>Harmful effects of promazine</td>
+</tr>
+<tr>
+<td>1369</td>
+<td>promazine poisoning</td>
+</tr>
+<tr>
+<td>1370</td>
+<td>Harmful effects of butyrophenone or thiothixene neuroleptics</td>
+</tr>
+<tr>
+<td>1371</td>
+<td>Harmful effects of typical, second-generation antipsychotics</td>
+</tr>
+<tr>
+<td>1372</td>
+<td>Harmful effects of lithium carbonate</td>
+</tr>
+<tr>
+<td>1373</td>
+<td>Harmful effects of antiepileptics or antiparkinsonism drugs</td>
+</tr>
+<tr>
+<td>1374</td>
+<td>Harmful effects of hydantoin derivatives</td>
+</tr>
+<tr>
+<td>1375</td>
+<td>Harmful effects of iminostilbenes</td>
+</tr>
+<tr>
+<td>1376</td>
+<td>Harmful effects of deoxybarbiturates</td>
+</tr>
+<tr>
+<td>1377</td>
+<td>Harmful effects of succinimides</td>
+</tr>
+<tr>
+<td>1378</td>
+<td>Harmful effects of oxazolidinediones</td>
+</tr>
+<tr>
+<td>1379</td>
+<td>Harmful effects of mixed antiepileptics, not elsewhere classified</td>
+</tr>
+<tr>
+<td>1380</td>
+<td>Harmful effects of Amantadine</td>
+</tr>
+<tr>
+<td>1381</td>
+<td>Harmful effects of Valproic acid</td>
+</tr>
+<tr>
+<td>1382</td>
+<td>Harmful effects of L-DOPA</td>
+</tr>
+<tr>
+<td>1383</td>
+<td>Harmful effects of Antiparkinsonism drugs or other central muscle-tone depressants, not elsewhere classified</td>
+</tr>
+<tr>
+<td>1384</td>
+<td>Harmful effects of antispasticity drugs</td>
+</tr>
+<tr>
+<td>1385</td>
+<td>Harmful effects of substances, drugs, medicaments or biological substance, Other or unspecified drugs, medicaments or biological substances</td>
+</tr>
+<tr>
+<td>1386</td>
+<td>Harmful effects of systemic antibiotics</td>
+</tr>
+<tr>
+<td>1387</td>
+<td>Harmful effects of Penicillins</td>
+</tr>
+<tr>
+<td>1388</td>
+<td>poisoning by penicillin</td>
+</tr>
+<tr>
+<td>1389</td>
+<td>poisoning by penicillins nos</td>
+</tr>
+<tr>
+<td>1390</td>
+<td>Harmful effects of cephalosporins and other beta-lactam antibiotics</td>
+</tr>
+<tr>
+<td>1391</td>
+<td>Harmful effects of cefotaxime</td>
+</tr>
+<tr>
+<td>1392</td>
+<td>cefotaxime poisoning</td>
+</tr>
+<tr>
+<td>1393</td>
+<td>Harmful effects of chloramphenicol group</td>
+</tr>
+<tr>
+<td>1394</td>
+<td>chloramphenicol poisoning</td>
+</tr>
+<tr>
+<td>1395</td>
+<td>Harmful effects of macrolides</td>
+</tr>
+<tr>
+<td>1396</td>
+<td>Harmful effects of tetracyclines</td>
+</tr>
+<tr>
+<td>1397</td>
+<td>poisoning by tetracyclines</td>
+</tr>
+<tr>
+<td>1398</td>
+<td>poisoning by tetracyclines nos</td>
+</tr>
+<tr>
+<td>1399</td>
+<td>Harmful effects of aminoglycosides</td>
+</tr>
+<tr>
+<td>1400</td>
+<td>Harmful effects of rifampicin</td>
+</tr>
+<tr>
+<td>1401</td>
+<td>rifampicin poisoning</td>
+</tr>
+<tr>
+<td>1402</td>
+<td>Harmful effects of antifungal antibiotics, systemically used</td>
+</tr>
+<tr>
+<td>1403</td>
+<td>Harmful effects of co-trimoxazole</td>
+</tr>
+<tr>
+<td>1404</td>
+<td>co-trimoxazole poisoning</td>
+</tr>
+<tr>
+<td>1405</td>
+<td>Harmful effects of fusidic acid</td>
+</tr>
+<tr>
+<td>1406</td>
+<td>fusidic acid poisoning</td>
+</tr>
+<tr>
+<td>1407</td>
+<td>Harmful effects of sodium fusidate</td>
+</tr>
+<tr>
+<td>1408</td>
+<td>sodium fusidate poisoning</td>
+</tr>
+<tr>
+<td>1409</td>
+<td>Harmful effects of vancomycin</td>
+</tr>
+<tr>
+<td>1410</td>
+<td>vancomycin poisoning</td>
+</tr>
+<tr>
+<td>1411</td>
+<td>Harmful effects of other systemic anti-infectives or antiparasitics</td>
+</tr>
+<tr>
+<td>1412</td>
+<td>Harmful effects of Sulfonamides</td>
+</tr>
+<tr>
+<td>1413</td>
+<td>Harmful effects of antimycobacterial drugs</td>
+</tr>
+<tr>
+<td>1414</td>
+<td>Harmful effects of antimalarials or drugs acting on other blood protozoa</td>
+</tr>
+<tr>
+<td>1415</td>
+<td>Harmful effects of other antiprotozoal drugs</td>
+</tr>
+<tr>
+<td>1416</td>
+<td>Harmful effects of anthelminthics</td>
+</tr>
+<tr>
+<td>1417</td>
+<td>Harmful effects of antiviral drugs</td>
+</tr>
+<tr>
+<td>1418</td>
+<td>Harmful effects of chiniofon</td>
+</tr>
+<tr>
+<td>1419</td>
+<td>chiniofon poisoning</td>
+</tr>
+<tr>
+<td>1420</td>
+<td>Harmful effects of diiodohydroxyquinoline</td>
+</tr>
+<tr>
+<td>1421</td>
+<td>diiodohydroxyquinoline poisoning</td>
+</tr>
+<tr>
+<td>1422</td>
+<td>Harmful effects of flucytosine</td>
+</tr>
+<tr>
+<td>1423</td>
+<td>flucytosine poisoning</td>
+</tr>
+<tr>
+<td>1424</td>
+<td>Harmful effects of hydroxyquinoline derivatives</td>
+</tr>
+<tr>
+<td>1425</td>
+<td>hydroxyquinoline derivatives poisoning</td>
+</tr>
+<tr>
+<td>1426</td>
+<td>Harmful effects of trimethoprim</td>
+</tr>
+<tr>
+<td>1427</td>
+<td>trimethoprim poisoning</td>
+</tr>
+<tr>
+<td>1428</td>
+<td>Harmful effects of hormones or their synthetic substitutes or antagonists, not elsewhere classified</td>
+</tr>
+<tr>
+<td>1429</td>
+<td>Harmful effects of Glucocorticoids or synthetic analogues</td>
+</tr>
+<tr>
+<td>1430</td>
+<td>Harmful effects of thyroid hormones or substitutes</td>
+</tr>
+<tr>
+<td>1431</td>
+<td>Harmful effects of antithyroid drugs</td>
+</tr>
+<tr>
+<td>1432</td>
+<td>Harmful effects of insulin or oral hypoglycaemic drugs</td>
+</tr>
+<tr>
+<td>1433</td>
+<td>Harmful effects of oral contraceptives</td>
+</tr>
+<tr>
+<td>1434</td>
+<td>poisoning by oral contraceptive</td>
+</tr>
+<tr>
+<td>1435</td>
+<td>poisoning by oral contraceptives nos</td>
+</tr>
+<tr>
+<td>1436</td>
+<td>Harmful effects of other estrogens or progestogens</td>
+</tr>
+<tr>
+<td>1437</td>
+<td>oestrogen poisoning</td>
+</tr>
+<tr>
+<td>1438</td>
+<td>Harmful effects of antigonadotropins, antiestrogens, antiandrogens, not elsewhere classified</td>
+</tr>
+<tr>
+<td>1439</td>
+<td>Harmful effects of androgens or anabolic congeners</td>
+</tr>
+<tr>
+<td>1440</td>
+<td>androgen poisoning</td>
+</tr>
+<tr>
+<td>1441</td>
+<td>Harmful effects of unspecified hormones or synthetic substitutes</td>
+</tr>
+<tr>
+<td>1442</td>
+<td>Harmful effects of anterior pituitary hormones</td>
+</tr>
+<tr>
+<td>1443</td>
+<td>Harmful effects of other hormones or synthetic substitutes</td>
+</tr>
+<tr>
+<td>1444</td>
+<td>Harmful effects of unspecified hormone antagonists</td>
+</tr>
+<tr>
+<td>1445</td>
+<td>Harmful effects of other hormone antagonists</td>
+</tr>
+<tr>
+<td>1446</td>
+<td>Harmful effects of trilostane</td>
+</tr>
+<tr>
+<td>1447</td>
+<td>Harmful effects of drugs primarily affecting the autonomic nervous system</td>
+</tr>
+<tr>
+<td>1448</td>
+<td>Harmful effects of substances, Drugs, medicaments or biological substances, Drugs primarily affecting the autonomic nervous system, Anticholinesterase agents</td>
+</tr>
+<tr>
+<td>1449</td>
+<td>anticholinesterase poisoning</td>
+</tr>
+<tr>
+<td>1450</td>
+<td>poisoning by anticholinesterase agents nos</td>
+</tr>
+<tr>
+<td>1451</td>
+<td>Harmful effects of substances, Drugs, medicaments or biological substances, Drugs primarily affecting the autonomic nervous system, Other parasympathomimetics</td>
+</tr>
+<tr>
+<td>1452</td>
+<td>Harmful effects of substances, Drugs, medicaments or biological substances, Drugs primarily affecting the autonomic nervous system, Ganglionic blocking drugs</td>
+</tr>
+<tr>
+<td>1453</td>
+<td>Harmful effects of substances, Drugs, medicaments or biological substances, Drugs primarily affecting the autonomic nervous system, Other parasympatholytics or spasmolytics</td>
+</tr>
+<tr>
+<td>1454</td>
+<td>Harmful effects of substances, Drugs, medicaments or biological substances, Drugs primarily affecting the autonomic nervous system, Predominantly alpha-adrenoreceptor agonists</td>
+</tr>
+<tr>
+<td>1455</td>
+<td>Harmful effects of substances, Drugs, medicaments or biological substances, Drugs primarily affecting the autonomic nervous system, Predominantly beta-adrenoreceptor agonists</td>
+</tr>
+<tr>
+<td>1456</td>
+<td>Harmful effects of substances, Drugs, medicaments or biological substances, Drugs primarily affecting the autonomic nervous system, Alpha-adrenoreceptor antagonists</td>
+</tr>
+<tr>
+<td>1457</td>
+<td>Harmful effects of substances, Drugs, medicaments or biological substances, Drugs primarily affecting the autonomic nervous system, Beta-adrenoreceptor antagonists</td>
+</tr>
+<tr>
+<td>1458</td>
+<td>Harmful effects of substances, Drugs, medicaments or biological substances, Drugs primarily affecting the autonomic nervous system, Centrally-acting or adrenergic-neuron-blocking agents</td>
+</tr>
+<tr>
+<td>1459</td>
+<td>Harmful effects of agents primarily affecting blood constituents</td>
+</tr>
+<tr>
+<td>1460</td>
+<td>haematological agent poisoning</td>
+</tr>
+<tr>
+<td>1461</td>
+<td>Harmful effects of Diphenhydramine</td>
+</tr>
+<tr>
+<td>1462</td>
+<td>diphenhydramine toxicity</td>
+</tr>
+<tr>
+<td>1463</td>
+<td>Harmful effects of other H1-receptor antagonists</td>
+</tr>
+<tr>
+<td>1464</td>
+<td>Harmful effects of antiallergic or antiemetic drugs</td>
+</tr>
+<tr>
+<td>1465</td>
+<td>Harmful effects of antineoplastic antimetabolites</td>
+</tr>
+<tr>
+<td>1466</td>
+<td>Harmful effects of antineoplastic natural products</td>
+</tr>
+<tr>
+<td>1467</td>
+<td>Harmful effects of other antineoplastic drugs</td>
+</tr>
+<tr>
+<td>1468</td>
+<td>Harmful effects of immunosuppressive agents</td>
+</tr>
+<tr>
+<td>1469</td>
+<td>Harmful effects of Vitamin B12, folic acid or other anti-megaloblastic-anaemia preparations</td>
+</tr>
+<tr>
+<td>1470</td>
+<td>Harmful effects of enzymes</td>
+</tr>
+<tr>
+<td>1471</td>
+<td>Harmful effects of iron or its compounds</td>
+</tr>
+<tr>
+<td>1472</td>
+<td>Harmful effects of anticoagulants</td>
+</tr>
+<tr>
+<td>1473</td>
+<td>Harmful effects of antithrombotic drugs</td>
+</tr>
+<tr>
+<td>1474</td>
+<td>harmful effect of platelet aggregation inhibitors</td>
+</tr>
+<tr>
+<td>1475</td>
+<td>Harmful effects of thrombolytic drug</td>
+</tr>
+<tr>
+<td>1476</td>
+<td>Harmful effects of anticoagulant antagonists, vitamin K or other coagulants</td>
+</tr>
+<tr>
+<td>1477</td>
+<td>Harmful effects of other fibrinolysis-affecting drugs</td>
+</tr>
+<tr>
+<td>1478</td>
+<td>fibrinolytic drug poisoning</td>
+</tr>
+<tr>
+<td>1479</td>
+<td>poisoning by fibrinolysis-affecting drug nos</td>
+</tr>
+<tr>
+<td>1480</td>
+<td>Harmful effects of natural blood or blood products</td>
+</tr>
+<tr>
+<td>1481</td>
+<td>Harmful effects of acidifying or alkalising agents</td>
+</tr>
+<tr>
+<td>1482</td>
+<td>Harmful effects of other primarily systemic agents, not elsewhere classified</td>
+</tr>
+<tr>
+<td>1483</td>
+<td>Blood poisoning, not elsewhere classified</td>
+</tr>
+<tr>
+<td>1484</td>
+<td>whole blood poisoning</td>
+</tr>
+<tr>
+<td>1485</td>
+<td>Harmful effects of heavy metal poisoning antidote</td>
+</tr>
+<tr>
+<td>1486</td>
+<td>Harmful effects of plasma substitutes</td>
+</tr>
+<tr>
+<td>1487</td>
+<td>Harmful effects of agents primarily affecting the cardiovascular system</td>
+</tr>
+<tr>
+<td>1488</td>
+<td>Harmful effects of cardiac-stimulant glycosides or drugs of similar action</td>
+</tr>
+<tr>
+<td>1489</td>
+<td>Harmful effects of calcium-channel blockers</td>
+</tr>
+<tr>
+<td>1490</td>
+<td>poisoning by calcium-channel blockers NOS</td>
+</tr>
+<tr>
+<td>1491</td>
+<td>Harmful effects of other antidysrhythmic drugs</td>
+</tr>
+<tr>
+<td>1492</td>
+<td>Harmful effects of Nitroglycerin, nitroglycerol, medicinal</td>
+</tr>
+<tr>
+<td>1493</td>
+<td>Harmful effects of other coronary vasodilators</td>
+</tr>
+<tr>
+<td>1494</td>
+<td>Harmful effects of Angiotensin-converting-enzyme inhibitors</td>
+</tr>
+<tr>
+<td>1495</td>
+<td>Harmful effects of other antihypertensive drugs</td>
+</tr>
+<tr>
+<td>1496</td>
+<td>Harmful effects of antihyperlipidemic or antiarteriosclerotic drugs</td>
+</tr>
+<tr>
+<td>1497</td>
+<td>Harmful effects of peripheral vasodilators</td>
+</tr>
+<tr>
+<td>1498</td>
+<td>Harmful effects of antivaricose drugs, including sclerosing agents</td>
+</tr>
+<tr>
+<td>1499</td>
+<td>antivaricose drug poisoning</td>
+</tr>
+<tr>
+<td>1500</td>
+<td>Harmful effects of agents primarily affecting the gastrointestinal system</td>
+</tr>
+<tr>
+<td>1501</td>
+<td>Harmful effects of Histamine H2-receptor blockers</td>
+</tr>
+<tr>
+<td>1502</td>
+<td>poisoning by histamine h 2 -receptor antagonists</td>
+</tr>
+<tr>
+<td>1503</td>
+<td>Harmful effects of other antacids or anti-gastric-secretion drugs</td>
+</tr>
+<tr>
+<td>1504</td>
+<td>Harmful effects of stimulant laxatives</td>
+</tr>
+<tr>
+<td>1505</td>
+<td>Harmful effects of saline or osmotic laxatives</td>
+</tr>
+<tr>
+<td>1506</td>
+<td>Harmful effects of other laxatives</td>
+</tr>
+<tr>
+<td>1507</td>
+<td>Harmful effects of digestants</td>
+</tr>
+<tr>
+<td>1508</td>
+<td>Harmful effects of antidiarrhoeal drugs</td>
+</tr>
+<tr>
+<td>1509</td>
+<td>Harmful effects of or exposure to emetics</td>
+</tr>
+<tr>
+<td>1510</td>
+<td>Harmful effects of agents primarily acting on smooth or skeletal muscles or the respiratory system</td>
+</tr>
+<tr>
+<td>1511</td>
+<td>Harmful effects of Oxytocic drugs</td>
+</tr>
+<tr>
+<td>1512</td>
+<td>oxytocin poisoning</td>
+</tr>
+<tr>
+<td>1513</td>
+<td>Harmful effects of skeletal muscle relaxants</td>
+</tr>
+<tr>
+<td>1514</td>
+<td>harmful effect of neuromuscular blocking agents</td>
+</tr>
+<tr>
+<td>1515</td>
+<td>Harmful effects of other drugs acting on muscles</td>
+</tr>
+<tr>
+<td>1516</td>
+<td>Harmful effects of unspecified drugs acting on muscles</td>
+</tr>
+<tr>
+<td>1517</td>
+<td>Harmful effects of antitussives</td>
+</tr>
+<tr>
+<td>1518</td>
+<td>Harmful effects of expectorants</td>
+</tr>
+<tr>
+<td>1519</td>
+<td>Harmful effects of other anti-common-cold drugs</td>
+</tr>
+<tr>
+<td>1520</td>
+<td>Harmful effects of Salbutamol</td>
+</tr>
+<tr>
+<td>1521</td>
+<td>salbutamol poisoning</td>
+</tr>
+<tr>
+<td>1522</td>
+<td>Harmful effects of Aminophylline, theophylline</td>
+</tr>
+<tr>
+<td>1523</td>
+<td>theophylline poisoning</td>
+</tr>
+<tr>
+<td>1524</td>
+<td>aminophylline poisoning</td>
+</tr>
+<tr>
+<td>1525</td>
+<td>Harmful effects of Terbutaline</td>
+</tr>
+<tr>
+<td>1526</td>
+<td>Harmful effects of antiasthmatics, not elsewhere classified</td>
+</tr>
+<tr>
+<td>1527</td>
+<td>Harmful effects of topical agents primarily affecting skin or mucous membrane or ophthalmological, otorhinolaryngological or dental drugs</td>
+</tr>
+<tr>
+<td>1528</td>
+<td>Harmful effects of topical corticosteroid preparations</td>
+</tr>
+<tr>
+<td>1529</td>
+<td>Harmful effects of Iodine, antiseptic</td>
+</tr>
+<tr>
+<td>1530</td>
+<td>Harmful effects of silver nitrate</td>
+</tr>
+<tr>
+<td>1531</td>
+<td>Harmful effects of other local antifungal, anti-infective or anti-inflammatory drugs</td>
+</tr>
+<tr>
+<td>1532</td>
+<td>Harmful effects of antipruritics</td>
+</tr>
+<tr>
+<td>1533</td>
+<td>Harmful effects of Methyl salicylate</td>
+</tr>
+<tr>
+<td>1534</td>
+<td>Harmful effects of other local astringents or local detergents</td>
+</tr>
+<tr>
+<td>1535</td>
+<td>Tannic acid poisoning</td>
+</tr>
+<tr>
+<td>1536</td>
+<td>Harmful effects of emollients, demulcents or protectants</td>
+</tr>
+<tr>
+<td>1537</td>
+<td>Harmful effects of Podophyllin</td>
+</tr>
+<tr>
+<td>1538</td>
+<td>Harmful effects of keratolytics, keratoplastics, or other hair treatment drugs or preparations</td>
+</tr>
+<tr>
+<td>1539</td>
+<td>Harmful effects of ophthalmological drugs or preparations</td>
+</tr>
+<tr>
+<td>1540</td>
+<td>Harmful effects of otorhinolaryngological drugs or preparations</td>
+</tr>
+<tr>
+<td>1541</td>
+<td>Harmful effects of ear, nose or throat anti-infectives</td>
+</tr>
+<tr>
+<td>1542</td>
+<td>Harmful effects of fluoride preparations</td>
+</tr>
+<tr>
+<td>1543</td>
+<td>Harmful effects of other dental drugs, topically applied</td>
+</tr>
+<tr>
+<td>1544</td>
+<td>Harmful effects of Camphor</td>
+</tr>
+<tr>
+<td>1545</td>
+<td>Harmful effects of agents primarily affecting water-balance or mineral or uric acid metabolism</td>
+</tr>
+<tr>
+<td>1546</td>
+<td>Harmful effects of Mineralocorticoids</td>
+</tr>
+<tr>
+<td>1547</td>
+<td>Harmful effects of Mineralocorticoids antagonists</td>
+</tr>
+<tr>
+<td>1548</td>
+<td>Harmful effects of Loop diuretics</td>
+</tr>
+<tr>
+<td>1549</td>
+<td>Harmful effect of high-ceiling diuretics</td>
+</tr>
+<tr>
+<td>1550</td>
+<td>Frusemide poisoning</td>
+</tr>
+<tr>
+<td>1551</td>
+<td>furosemide poisoning</td>
+</tr>
+<tr>
+<td>1552</td>
+<td>Etacrynic acid poisoning</td>
+</tr>
+<tr>
+<td>1553</td>
+<td>ethacrynic acid poisoning</td>
+</tr>
+<tr>
+<td>1554</td>
+<td>Harmful effects of Carbonic-anhydrase inhibitors</td>
+</tr>
+<tr>
+<td>1555</td>
+<td>Acetazolamide poisoning</td>
+</tr>
+<tr>
+<td>1556</td>
+<td>Bendroflumethiazide poisoning</td>
+</tr>
+<tr>
+<td>1557</td>
+<td>Chlormerodrin poisoning</td>
+</tr>
+<tr>
+<td>1558</td>
+<td>Chlorothiazide poisoning</td>
+</tr>
+<tr>
+<td>1559</td>
+<td>Mercaptomerin poisoning</td>
+</tr>
+<tr>
+<td>1560</td>
+<td>Mersalyl poisoning</td>
+</tr>
+<tr>
+<td>1561</td>
+<td>Harmful effects of Benzothiadiazine derivatives</td>
+</tr>
+<tr>
+<td>1562</td>
+<td>harmful effect of thiazides</td>
+</tr>
+<tr>
+<td>1563</td>
+<td>Harmful effects of other diuretics</td>
+</tr>
+<tr>
+<td>1564</td>
+<td>Harmful effects of electrolytic, caloric or water-balance agents</td>
+</tr>
+<tr>
+<td>1565</td>
+<td>Harmful effect of oral rehydration salts</td>
+</tr>
+<tr>
+<td>1566</td>
+<td>Sodium chloride poisoning</td>
+</tr>
+<tr>
+<td>1567</td>
+<td>Harmful effects of mineral salts, not elsewhere classified</td>
+</tr>
+<tr>
+<td>1568</td>
+<td>Harmful effects of drugs affecting uric acid metabolism</td>
+</tr>
+<tr>
+<td>1569</td>
+<td>Allopurinol poisoning</td>
+</tr>
+<tr>
+<td>1570</td>
+<td>Colchicine poisoning</td>
+</tr>
+<tr>
+<td>1571</td>
+<td>Probenecid poisoning</td>
+</tr>
+<tr>
+<td>1572</td>
+<td>Harmful effects of agents primarily affecting water-balance and mineral or uric acid metabolism, Vitamin D and derivatives</td>
+</tr>
+<tr>
+<td>1573</td>
+<td>Harmful effects of Bisphosphonates</td>
+</tr>
+<tr>
+<td>1574</td>
+<td>Harmful effects of appetite depressants</td>
+</tr>
+<tr>
+<td>1575</td>
+<td>Harmful effects of antidotes or chelating agents, not elsewhere classified</td>
+</tr>
+<tr>
+<td>1576</td>
+<td>Harmful effects of Disulfiram</td>
+</tr>
+<tr>
+<td>1577</td>
+<td>disulfiram poisoning</td>
+</tr>
+<tr>
+<td>1578</td>
+<td>Harmful effects of alcohol deterrents, not elsewhere classified</td>
+</tr>
+<tr>
+<td>1579</td>
+<td>harmful effect of alcohol deterrents</td>
+</tr>
+<tr>
+<td>1580</td>
+<td>Toxic effect of alcohol deterrents</td>
+</tr>
+<tr>
+<td>1581</td>
+<td>Harmful effects of X-ray contrast media</td>
+</tr>
+<tr>
+<td>1582</td>
+<td>Harmful effects of MRI contrast agents</td>
+</tr>
+<tr>
+<td>1583</td>
+<td>Harmful effects of agents used for other scanning techniques</td>
+</tr>
+<tr>
+<td>1584</td>
+<td>Harmful effects of other diagnostic agents</td>
+</tr>
+<tr>
+<td>1585</td>
+<td>Harmful effects of Lipotropic drugs</td>
+</tr>
+<tr>
+<td>1586</td>
+<td>Harmful effects of vitamins, not elsewhere classified, Pharmaceutical excipients</td>
+</tr>
+<tr>
+<td>1587</td>
+<td>Harmful effects of herbal preparations or formulas</td>
+</tr>
+<tr>
+<td>1588</td>
+<td>Harmful effects of dietary supplements, vitamins or minerals</td>
+</tr>
+<tr>
+<td>1589</td>
+<td>Harmful effects of complementary or Traditional Medicines, not elsewhere classified</td>
+</tr>
+<tr>
+<td>1590</td>
+<td>Harmful effects of complementary or Traditional Medicines, unspecified</td>
+</tr>
+<tr>
+<td>1591</td>
+<td>Harmful effects of vaccines, immunoglobulins or other biological substances</td>
+</tr>
+<tr>
+<td>1592</td>
+<td>Harmful effects of BCG vaccine</td>
+</tr>
+<tr>
+<td>1593</td>
+<td>Harmful effects of Typhoid or paratyphoid vaccine</td>
+</tr>
+<tr>
+<td>1594</td>
+<td>Harmful effects of Cholera vaccine</td>
+</tr>
+<tr>
+<td>1595</td>
+<td>Harmful effects of Plague vaccine</td>
+</tr>
+<tr>
+<td>1596</td>
+<td>Harmful effects of Tetanus vaccine</td>
+</tr>
+<tr>
+<td>1597</td>
+<td>Harmful effects of Diphtheria vaccine</td>
+</tr>
+<tr>
+<td>1598</td>
+<td>Harmful effects of Haemophilus influenzae type B vaccines</td>
+</tr>
+<tr>
+<td>1599</td>
+<td>Harmful effects of Pertussis vaccine, including combinations with a pertussis component</td>
+</tr>
+<tr>
+<td>1600</td>
+<td>Harmful effects of mixed bacterial vaccines without a pertussis component</td>
+</tr>
+<tr>
+<td>1601</td>
+<td>Harmful effects of other or unspecified bacterial vaccines</td>
+</tr>
+<tr>
+<td>1602</td>
+<td>Harmful effects of Smallpox vaccines</td>
+</tr>
+<tr>
+<td>1603</td>
+<td>Harmful effects of Measles vaccines</td>
+</tr>
+<tr>
+<td>1604</td>
+<td>Harmful effects of Mumps vaccines</td>
+</tr>
+<tr>
+<td>1605</td>
+<td>Harmful effects of Rubella vaccines</td>
+</tr>
+<tr>
+<td>1606</td>
+<td>Harmful effects of Polio vaccines</td>
+</tr>
+<tr>
+<td>1607</td>
+<td>Harmful effects of Yellow fever vaccines</td>
+</tr>
+<tr>
+<td>1608</td>
+<td>Harmful effects of Hepatitis A vaccines</td>
+</tr>
+<tr>
+<td>1609</td>
+<td>Harmful effects of Hepatitis B vaccines</td>
+</tr>
+<tr>
+<td>1610</td>
+<td>Harmful effects of Influenza vaccines</td>
+</tr>
+<tr>
+<td>1611</td>
+<td>Harmful effects of Rotavirus vaccines</td>
+</tr>
+<tr>
+<td>1612</td>
+<td>Harmful effects of Human papillomavirus vaccines</td>
+</tr>
+<tr>
+<td>1613</td>
+<td>Harmful effects of other viral vaccines</td>
+</tr>
+<tr>
+<td>1614</td>
+<td>Harmful effects of Rickettsial vaccines</td>
+</tr>
+<tr>
+<td>1615</td>
+<td>Harmful effects of Protozoal vaccines</td>
+</tr>
+<tr>
+<td>1616</td>
+<td>Harmful effects of Hepatitis B immune globulin</td>
+</tr>
+<tr>
+<td>1617</td>
+<td>Harmful effects of antivenin, antivenom</td>
+</tr>
+<tr>
+<td>1618</td>
+<td>Harmful effects of immunoglobulin, not elsewhere classified</td>
+</tr>
+<tr>
+<td>1619</td>
+<td>Harmful effects of other specified vaccines</td>
+</tr>
+<tr>
+<td>1620</td>
+<td>Harmful effects of unspecified vaccines</td>
+</tr>
+<tr>
+<td>1621</td>
+<td>Multiple drug toxicity</td>
+</tr>
+<tr>
+<td>1622</td>
+<td>Catatonia due to medication or substance</td>
+</tr>
+<tr>
+<td>1623</td>
+<td>Overdose of drug, not otherwise specified</td>
+</tr>
+<tr>
+<td>1624</td>
+<td>overdose NOS</td>
+</tr>
+<tr>
+<td>1625</td>
+<td>Harmful effects of ketorolac</td>
+</tr>
+<tr>
+<td>1626</td>
+<td>ketorolac poisoning</td>
+</tr>
+<tr>
+<td>1627</td>
+<td>Harmful effects of meptazinol</td>
+</tr>
+<tr>
+<td>1628</td>
+<td>meptazinol poisoning</td>
+</tr>
+<tr>
+<td>1629</td>
+<td>Harmful effects of nefopam</td>
+</tr>
+<tr>
+<td>1630</td>
+<td>nefopam poisoning</td>
+</tr>
+<tr>
+<td>1631</td>
+<td>Harmful effects of oxygen</td>
+</tr>
+<tr>
+<td>1632</td>
+<td>oxygen poisoning</td>
+</tr>
+<tr>
+<td>1633</td>
+<td>Harmful effects of ethosuximide</td>
+</tr>
+<tr>
+<td>1634</td>
+<td>ethosuximide poisoning</td>
+</tr>
+<tr>
+<td>1635</td>
+<td>Harmful effects of paramethadione</td>
+</tr>
+<tr>
+<td>1636</td>
+<td>paramethadione poisoning</td>
+</tr>
+<tr>
+<td>1637</td>
+<td>Harmful effects of trimethadione</td>
+</tr>
+<tr>
+<td>1638</td>
+<td>trimethadione poisoning</td>
+</tr>
+<tr>
+<td>1639</td>
+<td>Harmful effects of phensuximide</td>
+</tr>
+<tr>
+<td>1640</td>
+<td>phensuximide poisoning</td>
+</tr>
+<tr>
+<td>1641</td>
+<td>Adverse effect medical agent</td>
+</tr>
+<tr>
+<td>1642</td>
+<td>side effect</td>
+</tr>
+<tr>
+<td>1643</td>
+<td>side effect of medical agent</td>
+</tr>
+<tr>
+<td>1644</td>
+<td>Cocaine and fentanyl toxicity</td>
+</tr>
+<tr>
+<td>1645</td>
+<td>Methamphetamine and fentanyl toxicity</td>
+</tr>
+<tr>
+<td>1646</td>
+<td>Metachromatic leukodystrophy</td>
+</tr>
+<tr>
+<td>1647</td>
+<td>Greenfield's disease (metachromatic leukodystrophy)</td>
+</tr>
+<tr>
+<td>1648</td>
+<td>Arylsulfatase A deficiency</td>
+</tr>
+<tr>
+<td>1649</td>
+<td>Cerebroside sulfatase deficiency</td>
+</tr>
+<tr>
+<td>1650</td>
+<td>Late infantile metachromatic leukodystrophy</td>
+</tr>
+<tr>
+<td>1651</td>
+<td>Juvenile metachromatic leukodystrophy</td>
+</tr>
+<tr>
+<td>1652</td>
+<td>Adult metachromatic leukodystrophy</td>
+</tr>
+<tr>
+<td>1653</td>
+<td>Metachromatic leukodystrophy due to sphingolipid activator protein I deficiency</td>
+</tr>
+<tr>
+<td>1654</td>
+<td>Metachromatic leukodystrophy due to saposin B deficiency</td>
+</tr>
+<tr>
+<td>1655</td>
+<td>Metachromatic leukodystrophy due to cerebroside sulfatase activator deficiency</td>
+</tr>
+<tr>
+<td>1656</td>
+<td>Syndromes with vascular anomalies as a major feature</td>
+</tr>
+<tr>
+<td>1657</td>
+<td>Primary intraosseous vascular malformation</td>
+</tr>
+<tr>
+<td>1658</td>
+<td>Retinal cavernous haemangioma</td>
+</tr>
+<tr>
+<td>1659</td>
+<td>Sturge-Weber syndrome</td>
+</tr>
+<tr>
+<td>1660</td>
+<td>encephalotrigeminal angiomatosis</td>
+</tr>
+</tbody></table>
+
+  
+
+</body></html>
