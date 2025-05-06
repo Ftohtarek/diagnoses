@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Medical Specialties</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th,
+    td {
+      padding: 8px 12px;
+      border: 1px solid #ccc;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+
+<body>
+
+  <table id="specialtiesTable">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Arabic Name</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script>
+    const specialties = [
+
+      {
+        "name": "Anaesthetics",
+        "nameAr": "التخدير"
+      },
+      {
+        "name": "Blood banking and transfusion medicine",
+        "nameAr": "بنك الدم وطب نقل الدم - تخصص"
+      },
+      {
+        "name": "Cardiology",
+        "nameAr": "أمراض القلب"
+      },
+      {
+        "name": "Cardiothoracic surgery",
+        "nameAr": "جراحة القلب والصدر"
+      },
+      {
+        "name": "Chemical pathology",
+        "nameAr": "علم الأمراض الكيميائية"
+      },
+      {
+        "name": "Child and adolescent psychiatry",
+        "nameAr": "الطب النفسي للأطفال والمراهقين"
+      },
+      {
+        "name": "Clinical genetics",
+        "nameAr": "الوراثة السريرية"
+      },
+      {
+        "name": "Clinical hematology",
+        "nameAr": "أمراض الدم السريرية"
+      },
+      {
+        "name": "Clinical immunology/allergy",
+        "nameAr": "علم المناعة / الحساسية السريرية"
+      },
+      {
+        "name": "Clinical microbiology",
+        "nameAr": "علم الأحياء الدقيقة السريري"
+      },
+      {
+        "name": "Clinical neuro-physiology",
+        "nameAr": "الفسيولوجيا العصبية السريرية"
+      },
+      {
+        "name": "Clinical oncology",
+        "nameAr": "الأورام السريرية"
+      },
+      {
+        "name": "Clinical pharmacology",
+        "nameAr": "علم الأدوية السريرية"
+      },
+      {
+        "name": "Clinical physiology",
+        "nameAr": "الفسيولوجيا السريرية"
+      },
+      {
+        "name": "Community medicine",
+        "nameAr": "طب المجتمع"
+      },
+      {
+        "name": "Dental medicine specialties",
+        "nameAr": "تخصصات طب الأسنان"
+      },
+      {
+        "name": "Dermatology",
+        "nameAr": "الأمراض الجلدية"
+      },
+      {
+        "name": "Ear, nose and throat surgery",
+        "nameAr": "جراحة الأنف والأذن والحنجرة"
+      },
+      {
+        "name": "Emergency medicine",
+        "nameAr": "طب الطوارئ"
+      },
+      {
+        "name": "Endocrinology",
+        "nameAr": "الغدد الصماء"
+      },
+      {
+        "name": "Forensic medicine",
+        "nameAr": "الطب الشرعي"
+      },
+      {
+        "name": "Gastroenterology",
+        "nameAr": "أمراض الجهاز الهضمي"
+      },
+      {
+        "name": "General medical practice",
+        "nameAr": "الطب العام"
+      },
+      {
+        "name": "General pathology (specialty)",
+        "nameAr": "علم الأمراض العامة - تخصص"
+      },
+      {
+        "name": "General surgery",
+        "nameAr": "الجراحة العامة"
+      },
+      {
+        "name": "Geriatric medicine",
+        "nameAr": "طب الشيخوخة"
+      },
+      {
+        "name": "Hepatology",
+        "nameAr": "أمراض الكبد"
+      },
+      {
+        "name": "Infectious diseases (specialty)",
+        "nameAr": "الأمراض المعدية - تخصص "
+      },
+      {
+        "name": "Internal medicine",
+        "nameAr": "الطب الباطني"
+      },
+      {
+        "name": "Nephrology",
+        "nameAr": "أمراض الكلى"
+      },
+      {
+        "name": "Neurology",
+        "nameAr": "طب الأعصاب"
+      },
+      {
+        "name": "Neurosurgery",
+        "nameAr": "جراحة الأعصاب"
+      },
+      {
+        "name": "Nuclear Medicine",
+        "nameAr": "الطب النووي"
+      },
+      {
+        "name": "Obstetrics and gynecology",
+        "nameAr": "التوليد وأمراض النساء"
+      },
+      {
+        "name": "Occupational medicine",
+        "nameAr": "طب المهنيين"
+      },
+      {
+        "name": "Ophthalmology",
+        "nameAr": "طب العيون"
+      },
+      {
+        "name": "Oral surgery",
+        "nameAr": "جراحة الفم"
+      },
+      {
+        "name": "Orthodontics",
+        "nameAr": "تقويم الأسنان"
+      },
+      {
+        "name": "Palliative Medicine",
+        "nameAr": "الطب التلطيفي"
+      },
+      {
+        "name": "Pediatric Cardiology",
+        "nameAr": "أمراض قلب الأطفال"
+      },
+      {
+        "name": "Pediatric Endocrinology",
+        "nameAr": "أمراض الغدد الصماء للأطفال"
+      },
+      {
+        "name": "Pediatric Gastroenterology",
+        "nameAr": "أمراض الجهاز الهضمي للأطفال"
+      },
+      {
+        "name": "Pediatric Hematology/Oncology",
+        "nameAr": "أمراض الدم والأورام للأطفال"
+      },
+      {
+        "name": "Pediatric Nephrology",
+        "nameAr": "أمراض الكلى للأطفال"
+      },
+      {
+        "name": "Pediatric Neurology",
+        "nameAr": "أمراض الأعصاب للأطفال"
+      },
+      {
+        "name": "Pediatric Pulmonology",
+        "nameAr": "أمراض الصدر للأطفال"
+      },
+      {
+        "name": "Pediatric Rheumatology",
+        "nameAr": "أمراض الروماتيزم والمناعة للأطفال"
+      },
+      {
+        "name": "Pediatrics",
+        "nameAr": "طب الأطفال"
+      },
+      {
+        "name": "Physical Medicine and Rehabilitation",
+        "nameAr": "الطب الطبيعي وإعادة التأهيل"
+      },
+      {
+        "name": "Plastic surgery - specialty",
+        "nameAr": "جراحة التجميل"
+      },
+      {
+        "name": "Psychiatry",
+        "nameAr": "الطب النفسي"
+      },
+      {
+        "name": "Pulmonary medicine",
+        "nameAr": "طب الرئة"
+      },
+      {
+        "name": "Radiology - specialty",
+        "nameAr": "الأشعة - التخصص"
+      },
+      {
+        "name": "Rheumatology",
+        "nameAr": "أمراض الروماتيزم"
+      },
+      {
+        "name": "Surgical Gastroenterology",
+        "nameAr": "جراحة الجهاز الهضمي"
+      },
+      {
+        "name": "Trauma and orthopedics",
+        "nameAr": "إصابات وجراحة العظام"
+      },
+      {
+        "name": "Tropical medicine",
+        "nameAr": "الطب الاستوائي"
+      },
+      {
+        "name": "Urology",
+        "nameAr": "أمراض المسالك البولية"
+      },
+      {
+        "name": "Vascular surgery",
+        "nameAr": "جراحة الأوعية الدموية"
+      }
+    ];
+
+    const tbody = document.querySelector('#specialtiesTable tbody');
+
+    specialties.forEach(item => {
+      const row = document.createElement('tr');
+      row.innerHTML = `<td>${item.name}</td><td>${item.nameAr}</td>`;
+      tbody.appendChild(row);
+    });
+  </script>
+
+</body>
+
+</html>
